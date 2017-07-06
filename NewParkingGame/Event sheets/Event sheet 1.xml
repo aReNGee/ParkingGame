@@ -5,69 +5,78 @@
     <events>
         <variable constant="0" name="DoTheThing" sid="680961029465031" static="0" type="number">0</variable>
         <variable constant="0" name="IsItACar" sid="305707125498603" static="0" type="text"></variable>
-        <event-block sid="528000633399566">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="951105900583345" type="System">
-                    <param id="0" name="Interval (seconds)">3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="414984308519825" type="System">
-                    <param id="0" name="Variable">IsItACar</param>
-                    <param id="1" name="Value">choose(&quot;yes&quot;, &quot;no&quot;)</param>
-                </action>
-            </actions>
+        <event-group description="" sid="386115664904024" title="SpawnStuff">
             <sub-events>
-                <event-block sid="670823222907308">
+                <variable constant="0" name="SpawnItHere" sid="547833818743643" static="0" type="number">0</variable>
+                <event-block sid="528000633399566">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="802954294233440" type="System">
-                            <param id="0" name="Variable">IsItACar</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;yes&quot;</param>
+                        <condition id="-6" name="Every X seconds" sid="951105900583345" type="System">
+                            <param id="0" name="Interval (seconds)">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="776851576447173" type="System">
-                            <param id="0" name="Object to create">Car</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">choose(100, 300, 500, 700, 900)</param>
-                            <param id="3" name="Y">choose(100, 300, 500, 700, 900)</param>
+                        <action id="-9" name="Set value" sid="414984308519825" type="System">
+                            <param id="0" name="Variable">IsItACar</param>
+                            <param id="1" name="Value">choose(&quot;yes&quot;, &quot;no&quot;)</param>
                         </action>
-                        <action id="-3" name="Create object" sid="127056810188073" type="System">
-                            <param id="0" name="Object to create">Text</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Car.X</param>
-                            <param id="3" name="Y">Car.Y</param>
-                        </action>
-                        <action id="0" name="Set text" sid="502382490416315" type="Text">
-                            <param id="0" name="Text">choose(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;)</param>
+                        <action id="-9" name="Set value" sid="275779445932709" type="System">
+                            <param id="0" name="Variable">SpawnItHere</param>
+                            <param id="1" name="Value">choose(0,1,2,3,4,5,6,7,8,9)</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="173824933109762">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="277444460160660" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="563121105766754" type="System">
-                            <param id="0" name="Object to create">Bike</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">choose(100, 300, 500, 700, 900)</param>
-                            <param id="3" name="Y">choose(100, 300, 500, 700, 900)</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="740934141462340" type="System">
-                            <param id="0" name="Object to create">Text</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Bike.X</param>
-                            <param id="3" name="Y">Bike.Y</param>
-                        </action>
-                        <action id="0" name="Set text" sid="685554782897791" type="Text">
-                            <param id="0" name="Text">choose(&quot;Z&quot;,&quot;X&quot;,&quot;Y&quot;)</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="670823222907308">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="802954294233440" type="System">
+                                    <param id="0" name="Variable">IsItACar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;yes&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="776851576447173" type="System">
+                                    <param id="0" name="Object to create">Car</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">StuffSpawnsHere(SpawnItHere).X</param>
+                                    <param id="3" name="Y">StuffSpawnsHere(SpawnItHere).Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="127056810188073" type="System">
+                                    <param id="0" name="Object to create">Text</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Car.X</param>
+                                    <param id="3" name="Y">Car.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="502382490416315" type="Text">
+                                    <param id="0" name="Text">choose(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="173824933109762">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="277444460160660" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="704973143928430" type="System">
+                                    <param id="0" name="Object to create">Bike</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">StuffSpawnsHere(SpawnItHere).X</param>
+                                    <param id="3" name="Y">StuffSpawnsHere(SpawnItHere).Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="740934141462340" type="System">
+                                    <param id="0" name="Object to create">Text</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Bike.X</param>
+                                    <param id="3" name="Y">Bike.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="685554782897791" type="Text">
+                                    <param id="0" name="Text">choose(&quot;Z&quot;,&quot;X&quot;,&quot;Y&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
         <event-group description="" sid="590457794446726" title="ClickingOnStuff">
             <sub-events>
                 <event-block sid="919937778955173">
