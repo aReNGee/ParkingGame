@@ -3,15 +3,23 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="DupeChecking" sid="838629992345805" static="0" type="number">0</variable>
+        <variable comment="Checks for things already being in spawn points" constant="0" name="WeHaveSpawnedStuffAt" sid="504517066198599" static="0" type="text"></variable>
+        <variable comment="Boolean" constant="0" name="SomethingSelected" sid="687170434816457" static="0" type="number">-1</variable>
         <variable constant="0" name="DoTheThing" sid="680961029465031" static="0" type="number">0</variable>
         <variable constant="0" name="IsItACar" sid="305707125498603" static="0" type="text"></variable>
+        <variable constant="0" name="SpawnItHere" sid="547833818743643" static="0" type="number">0</variable>
         <event-group description="" sid="386115664904024" title="SpawnStuff">
             <sub-events>
-                <variable constant="0" name="SpawnItHere" sid="547833818743643" static="0" type="number">0</variable>
                 <event-block sid="528000633399566">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="951105900583345" type="System">
                             <param id="0" name="Interval (seconds)">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="447523019554949" type="System">
+                            <param id="0" name="First value">len(WeHaveSpawnedStuffAt)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">10</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -23,8 +31,41 @@
                             <param id="0" name="Variable">SpawnItHere</param>
                             <param id="1" name="Value">choose(0,1,2,3,4,5,6,7,8,9)</param>
                         </action>
+                        <action id="-9" name="Set value" sid="600740381947883" type="System">
+                            <param id="0" name="Variable">DupeChecking</param>
+                            <param id="1" name="Value">find(WeHaveSpawnedStuffAt,str(SpawnItHere))</param>
+                        </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="528093605709726">
+                            <conditions>
+                                <condition id="-23" name="While" sid="635562590042856" type="System" />
+                                <condition id="-8" name="Compare two values" sid="330750987441491" type="System">
+                                    <param id="0" name="First value">DupeChecking</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="477882522540833" type="System">
+                                    <param id="0" name="Variable">SpawnItHere</param>
+                                    <param id="1" name="Value">choose(0,1,2,3,4,5,6,7,8,9)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="588519512516992" type="System">
+                                    <param id="0" name="Variable">DupeChecking</param>
+                                    <param id="1" name="Value">find(WeHaveSpawnedStuffAt,str(SpawnItHere))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="393265173332954">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="760848935774834" type="System">
+                                    <param id="0" name="Variable">WeHaveSpawnedStuffAt</param>
+                                    <param id="1" name="Value">str(SpawnItHere)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="670823222907308">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="802954294233440" type="System">
@@ -79,139 +120,168 @@
         </event-group>
         <event-group description="" sid="590457794446726" title="ClickingOnStuff">
             <sub-events>
-                <event-block sid="919937778955173">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="808622194694589" type="Touch">
-                            <param id="0" name="Object">Car</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="518200122440827" type="Car">
-                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                            <param id="1" name="Value">&quot;dis1&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="902739408821463" type="System">
-                            <param id="0" name="Variable">DoTheThing</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="633905998265466">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="248649581900935" type="Touch">
-                            <param id="0" name="Object">Bike</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="341761672228286" type="Bike">
-                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                            <param id="1" name="Value">&quot;dis1&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="272140184587506" type="System">
-                            <param id="0" name="Variable">DoTheThing</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>makes sure only one thing is selected</comment>
-                <event-block sid="969257733849518">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="521257440655197" type="System" />
-                        <condition id="-14" name="Compare variable" sid="322561245226023" type="System">
-                            <param id="0" name="Variable">DoTheThing</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="176502695028193" type="System">
-                            <param id="0" name="Variable">DoTheThing</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="676019696203856" title="Clicking On Parking Spaces">
                     <sub-events>
-                        <event-block sid="827321358331141">
+                        <event-block sid="479050837809878">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="644159767891923" type="System">
-                                    <param id="0" name="Object">Bike</param>
+                                <condition id="17" name="On tap object" sid="778004635836849" type="Touch">
+                                    <param id="0" name="Object">ParkingSpace</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="140351141464534" type="System">
+                                    <param id="0" name="Variable">SomethingSelected</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions />
-                            <sub-events>
-                                <event-block sid="873983804459034">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="479761477708383" type="Bike">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;dis1&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="563092196464778" type="Bike">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Value">&quot;nope&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="168625737782741">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="935544109829971" type="Bike">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;dis1&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="307761321069472" type="Bike">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Value">&quot;yup&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
-                        <event-block sid="109994631434227">
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="866313552766922" title="Clicking On Objects to Park">
+                    <sub-events>
+                        <event-block sid="919937778955173">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="698714387714129" type="System">
+                                <condition id="17" name="On tap object" sid="808622194694589" type="Touch">
                                     <param id="0" name="Object">Car</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="518200122440827" type="Car">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Value">&quot;dis1&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="902739408821463" type="System">
+                                    <param id="0" name="Variable">DoTheThing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="137285511813721" type="System">
+                                    <param id="0" name="Variable">SomethingSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="633905998265466">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="248649581900935" type="Touch">
+                                    <param id="0" name="Object">Bike</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="341761672228286" type="Bike">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Value">&quot;dis1&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="272140184587506" type="System">
+                                    <param id="0" name="Variable">DoTheThing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="602889201803038" type="System">
+                                    <param id="0" name="Variable">SomethingSelected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>makes sure only one thing is selected</comment>
+                        <event-block sid="969257733849518">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="521257440655197" type="System" />
+                                <condition id="-14" name="Compare variable" sid="322561245226023" type="System">
+                                    <param id="0" name="Variable">DoTheThing</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="176502695028193" type="System">
+                                    <param id="0" name="Variable">DoTheThing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="708655235163157">
+                                <event-block sid="827321358331141">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="116491353874413" type="Car">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;dis1&quot;</param>
+                                        <condition id="-11" name="For Each" sid="644159767891923" type="System">
+                                            <param id="0" name="Object">Bike</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="330494719879747" type="Car">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Value">&quot;nope&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="873983804459034">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="479761477708383" type="Bike">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;dis1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="563092196464778" type="Bike">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Value">&quot;nope&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="168625737782741">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="935544109829971" type="Bike">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;dis1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="307761321069472" type="Bike">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Value">&quot;yup&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <event-block sid="924670778095020">
+                                <event-block sid="109994631434227">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="122165499224633" type="Car">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;dis1&quot;</param>
+                                        <condition id="-11" name="For Each" sid="698714387714129" type="System">
+                                            <param id="0" name="Object">Car</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="526049974855581" type="Car">
-                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                            <param id="1" name="Value">&quot;yup&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="708655235163157">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="116491353874413" type="Car">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;dis1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="330494719879747" type="Car">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Value">&quot;nope&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="924670778095020">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="122165499224633" type="Car">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;dis1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="526049974855581" type="Car">
+                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                    <param id="1" name="Value">&quot;yup&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
