@@ -455,9 +455,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="551327492677265" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
                         <action id="-8" name="Set angle" sid="517431475837273" type="Car">
                             <param id="0" name="Angle">90</param>
                         </action>
@@ -473,9 +470,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="510467969916369" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
                         <action id="-8" name="Set angle" sid="314867348037291" type="Car">
                             <param id="0" name="Angle">180</param>
                         </action>
@@ -491,9 +485,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="179737615442123" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
                         <action id="-8" name="Set angle" sid="626781054490274" type="Car">
                             <param id="0" name="Angle">270</param>
                         </action>
@@ -509,9 +500,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="114630783907844" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
                         <action id="-8" name="Set angle" sid="339709157633187" type="Car">
                             <param id="0" name="Angle">0</param>
                         </action>
@@ -585,7 +573,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="826092403008003">
+        <event-block disabled="1" sid="826092403008003">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="158066761157269" type="CarCollider">
                     <param id="0" name="Object">Car</param>
@@ -594,7 +582,7 @@
             <actions>
                 <action behavior="CustomMovement" id="2" name="Set speed" sid="232025941888599" type="Car">
                     <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">120</param>
+                    <param id="1" name="Speed">car.CustomMovement.Speed - 5</param>
                 </action>
                 <action id="4" name="Set animation" sid="372320663471806" type="Car">
                     <param id="0" name="Animation">&quot;Animation2&quot;</param>
@@ -602,7 +590,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="186876912700046">
+        <event-block disabled="1" sid="186876912700046">
             <conditions>
                 <condition id="-22" name="Else" sid="782694201066362" type="System" />
             </conditions>
