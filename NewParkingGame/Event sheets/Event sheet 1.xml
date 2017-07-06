@@ -24,21 +24,25 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="414984308519825" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="414984308519825" type="System">
                             <param id="0" name="Variable">IsItACar</param>
                             <param id="1" name="Value">choose(&quot;yes&quot;, &quot;no&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="275779445932709" type="System">
                             <param id="0" name="Variable">SpawnItHere</param>
-                            <param id="1" name="Value">choose(0,1,2,3,4,5,6,7,8,9)</param>
+                            <param id="1" name="Value">choose(0,1,2,3)</param>
                         </action>
                         <action id="-9" name="Set value" sid="600740381947883" type="System">
                             <param id="0" name="Variable">DupeChecking</param>
                             <param id="1" name="Value">find(WeHaveSpawnedStuffAt,str(SpawnItHere))</param>
                         </action>
+                        <action id="-9" name="Set value" sid="106186331860988" type="System">
+                            <param id="0" name="Variable">IsItACar</param>
+                            <param id="1" name="Value">&quot;yes&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="528093605709726">
+                        <event-block disabled="1" sid="528093605709726">
                             <conditions>
                                 <condition id="-23" name="While" sid="635562590042856" type="System" />
                                 <condition id="-8" name="Compare two values" sid="330750987441491" type="System">
@@ -58,7 +62,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="393265173332954">
+                        <event-block disabled="1" sid="393265173332954">
                             <conditions />
                             <actions>
                                 <action id="-10" name="Add to" sid="760848935774834" type="System">
@@ -94,6 +98,16 @@
                                 <action id="-10" name="Set value" sid="564789431394797" type="Car">
                                     <param id="0" name="Instance variable">ISpawnedAt</param>
                                     <param id="1" name="Value">SpawnItHere</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="947112953080697" type="Car">
+                                    <param id="0" name="Angle">StuffSpawnsHere(SpawnItHere).SetRotationTo</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="281739625858427" type="Car">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">320</param>
+                                </action>
+                                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="657162642474930" type="Car">
+                                    <param id="0" name="Angle">Car.Angle</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -432,5 +446,176 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-group description="" sid="805604583590979" title="CarsGoCycle">
+            <sub-events>
+                <event-block sid="617704554050744">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="217941460479587" type="Car">
+                            <param id="0" name="Object">TurningPoint1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="551327492677265" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="517431475837273" type="Car">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="499741305395403" type="Car">
+                            <param id="0" name="Angle">Car.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="917566877862753">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="388649120706743" type="Car">
+                            <param id="0" name="Object">TurningPoint2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="510467969916369" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="314867348037291" type="Car">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="952606295359509" type="Car">
+                            <param id="0" name="Angle">Car.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="702707693466208">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="160494398982457" type="Car">
+                            <param id="0" name="Object">TurningPoint3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="179737615442123" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="626781054490274" type="Car">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="594100193624101" type="Car">
+                            <param id="0" name="Angle">Car.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="600273498787572">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="712930469245957" type="Car">
+                            <param id="0" name="Object">TurningPoint4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="114630783907844" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="339709157633187" type="Car">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="922079212585218" type="Car">
+                            <param id="0" name="Angle">Car.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="947475836464704" title="CarColliders">
+            <sub-events>
+                <event-block sid="523098557590890">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="671677339024858" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="650951503630796" type="CarCollider">
+                            <param id="0" name="X">car.X</param>
+                            <param id="1" name="Y">car.Y</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="660137585029197" type="CarCollider">
+                            <param id="0" name="Angle">Car.Angle</param>
+                        </action>
+                        <action behavior="CustomMovement" disabled="1" id="2" name="Set speed" sid="199245579175909" type="Car">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">320</param>
+                        </action>
+                        <action behavior="CustomMovement" disabled="1" id="6" name="Set angle of motion" sid="634673688996725" type="Car">
+                            <param id="0" name="Angle">Car.Angle</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="178722685388395">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="797768988066991" type="System">
+                                    <param id="0" name="Object">Car</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="971131718480339">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="837507370182429" type="Car">
+                                            <param id="0" name="Object">CarCollider</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="345775941169026" type="Car" />
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="353980913734635">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="694036467493357" type="Car">
+                                            <param id="0" name="Object">CarCollider</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="CustomMovement" id="2" name="Set speed" sid="429770116598093" type="Car">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">320</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="887005450630944" type="Car">
+                                            <param id="0" name="Angle">Car.Angle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="826092403008003">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="158066761157269" type="CarCollider">
+                    <param id="0" name="Object">Car</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="232025941888599" type="Car">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">120</param>
+                </action>
+                <action id="4" name="Set animation" sid="372320663471806" type="Car">
+                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="186876912700046">
+            <conditions>
+                <condition id="-22" name="Else" sid="782694201066362" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="501496639060600" type="Car">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">320</param>
+                </action>
+                <action id="4" name="Set animation" sid="260306973749623" type="Car">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

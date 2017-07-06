@@ -14,7 +14,9 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -57,9 +59,39 @@
                 <instance-variable name="ISpawnedAt" sid="910919643128375" type="string" />
                 <instance-variable name="ImGoingTo" sid="209894194934273" type="string" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="739867445271563">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Car</type>
+                <type>CarCollider</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395792726456731" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511364" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
+                        <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                        <collision-poly>
+                            <point x="0.0743243" y="0.0681818" />
+                            <point x="0.932432" y="0.0568182" />
+                            <point x="0.993243" y="0.5" />
+                            <point x="0.912162" y="0.909091" />
+                            <point x="0.0945946" y="0.897727" />
+                            <point x="0.00675677" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="600686345520404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
+                        <image-point name="Collider Goes Here" x="-0.15" y="0.506667" />
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0.545" y="1" />
+                            <point x="0.545" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -92,6 +124,9 @@
         </object-type>
         <object-type name="StuffSpawnsHere" sid="605768448066620">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SetRotationTo" sid="915540093033234" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341130208714411" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -107,6 +142,72 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493979547585458" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TurningPoint1" sid="730463168505060">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="541944057930398" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TurningPoint2" sid="972604625778633">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="240689936016720" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TurningPoint3" sid="842825953143412">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568311228440091" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TurningPoint4" sid="949560605019316">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804030381735127" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CarCollider" sid="414798947115761">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="UClickedOnThis" sid="878546537812320" type="string" />
+                <instance-variable name="ISpawnedAt" sid="867537763420171" type="string" />
+                <instance-variable name="ImGoingTo" sid="423849439514292" type="string" />
+            </instance-variables>
+            <container>
+                <type>Car</type>
+                <type>CarCollider</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846457033826044" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.103333" y="0" />
+                            <point x="0.103333" y="0.993333" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="846070818335263" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.103333" y="0" />
+                            <point x="0.103333" y="0.993333" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
