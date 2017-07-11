@@ -3,6 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable comment="Boolean, -1 = empty, 1 = full" constant="0" name="BoolLeftLaneLeftSide" sid="126254465541464" static="0" type="number">-1</variable>
+        <variable comment="Boolean, -1 = empty, 1 = full" constant="0" name="BoolLeftLaneRightSide" sid="447959980757994" static="0" type="number">-1</variable>
+        <variable comment="Boolean, -1 = empty, 1 = full" constant="0" name="BoolRightLaneLeftSide" sid="662432526758216" static="0" type="number">-1</variable>
+        <variable comment="Boolean, -1 = empty, 1 = full" constant="0" name="BoolRightLaneRightSide" sid="494724565999914" static="0" type="number">-1</variable>
+        <variable constant="1" name="CarCap" sid="774886392169711" static="0" type="number">10</variable>
+        <variable constant="0" name="ThingsOnScreen" sid="533676289867153" static="0" type="number">0</variable>
         <variable comment="Says What the player has recently clicked on. Blank if its nothing." constant="0" name="CurrentlySelected" sid="690181180765606" static="0" type="text"></variable>
         <variable constant="0" name="DupeChecking" sid="838629992345805" static="0" type="number">0</variable>
         <variable comment="Checks for things already being in spawn points" constant="0" name="WeHaveSpawnedStuffAt" sid="504517066198599" static="0" type="text"></variable>
@@ -17,10 +23,10 @@
                         <condition id="-6" name="Every X seconds" sid="951105900583345" type="System">
                             <param id="0" name="Interval (seconds)">3</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="447523019554949" type="System">
-                            <param id="0" name="First value">len(WeHaveSpawnedStuffAt)</param>
+                        <condition id="-14" name="Compare variable" sid="447523019554949" type="System">
+                            <param id="0" name="Variable">ThingsOnScreen</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">10</param>
+                            <param id="2" name="Value">CARCAP</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -32,7 +38,7 @@
                             <param id="0" name="Variable">SpawnItHere</param>
                             <param id="1" name="Value">choose(0,1,2,3)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="600740381947883" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="600740381947883" type="System">
                             <param id="0" name="Variable">DupeChecking</param>
                             <param id="1" name="Value">find(WeHaveSpawnedStuffAt,str(SpawnItHere))</param>
                         </action>
@@ -62,12 +68,16 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="393265173332954">
+                        <event-block sid="393265173332954">
                             <conditions />
                             <actions>
-                                <action id="-10" name="Add to" sid="760848935774834" type="System">
+                                <action disabled="1" id="-10" name="Add to" sid="760848935774834" type="System">
                                     <param id="0" name="Variable">WeHaveSpawnedStuffAt</param>
                                     <param id="1" name="Value">str(SpawnItHere)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="992606177130906" type="System">
+                                    <param id="0" name="Variable">ThingsOnScreen</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -216,7 +226,43 @@
                                                             <param id="0" name="Animation">&quot;Parked&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
+                                                        <action id="-11" name="Subtract from" sid="358721744211881" type="System">
+                                                            <param id="0" name="Variable">ThingsOnScreen</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="920443152615495">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="689574655426520" type="ParkingSpace">
+                                                                    <param id="0" name="Instance variable">LANEOCCUPIED</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">3</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="215738838701790" type="System">
+                                                                    <param id="0" name="Variable">BoolRightLaneLeftSide</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="337417830353102">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="260785910597057" type="ParkingSpace">
+                                                                    <param id="0" name="Instance variable">LANEOCCUPIED</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">4</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="351856658964372" type="System">
+                                                                    <param id="0" name="Variable">BoolRightLaneRightSide</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -456,10 +502,13 @@
         </event-group>
         <event-group description="" sid="805604583590979" title="CarsGoCycle">
             <sub-events>
-                <event-block sid="617704554050744">
+                <event-block any="1" sid="617704554050744">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="217941460479587" type="Car">
                             <param id="0" name="Object">TurningPoint1</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="727990506758823" type="Car">
+                            <param id="0" name="Object">TurningPoint1B</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -471,10 +520,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="917566877862753">
+                <event-block any="1" sid="917566877862753">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="388649120706743" type="Car">
                             <param id="0" name="Object">TurningPoint2</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="384672314513569" type="Car">
+                            <param id="0" name="Object">TurningPoint2B</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -486,7 +538,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="702707693466208">
+                <event-block any="1" sid="702707693466208">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="160494398982457" type="Car">
                             <param id="0" name="Object">TurningPoint3</param>
@@ -668,6 +720,96 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="127016830129163" title="Dynamic Cycling!">
+            <sub-events>
+                <event-block sid="198240998274581">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="148519324380092" type="System">
+                            <param id="0" name="Variable">BoolRightLaneRightSide</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>right lane is full, go to left lane</comment>
+                <event-block sid="162166018548321">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="530447956065423" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Left Lane is Empty</comment>
+                        <event-block sid="231865356734662">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="950638529917458" type="System">
+                                    <param id="0" name="Variable">BoolRightLaneLeftSide</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="563483232797519" type="TurningPoint1B">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="513157108737035" type="TurningPoint2B">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="220782293953694">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="217601792999770" type="StuffSpawnsHere">
+                                            <param id="0" name="Instance variable">SetRotationTo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="417419786043840" type="StuffSpawnsHere">
+                                            <param id="0" name="X">1350</param>
+                                            <param id="1" name="Y">StuffSpawnsHere.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Left Lane is Full, cars just drive off</comment>
+                        <event-block sid="956727986761431">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="378822366118782" type="System">
+                                    <param id="0" name="Variable">BoolRightLaneLeftSide</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="134962563633571" type="TurningPoint1B">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="954611576753396" type="TurningPoint1">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="977779733351468">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="635519309298954" type="StuffSpawnsHere">
+                                            <param id="0" name="Instance variable">SetRotationTo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="480516876218793" type="StuffSpawnsHere" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

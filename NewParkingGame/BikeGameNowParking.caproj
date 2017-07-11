@@ -48,7 +48,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="497522342621972" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\BrantfordJob(NotCluttered)\NewParkingGame\Files\parking layout.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\Parking Game.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -73,11 +73,23 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395792726456731" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.511364" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
                         <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.810811" y="0" />
+                            <point x="0.810811" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="657476506480545" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
                         <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.810811" y="0" />
+                            <point x="0.810811" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="573043131229427" speed="5">
@@ -136,7 +148,7 @@
             <instance-variables>
                 <instance-variable name="Occupied" sid="477650953035717" type="string" />
                 <instance-variable name="IAM" sid="798188447071600" type="string" />
-                <instance-variable name="CarAngle" sid="250862449053442" type="number" />
+                <instance-variable name="LANEOCCUPIED" sid="250862449053442" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493979547585458" speed="5">
@@ -216,6 +228,22 @@
                             <point x="0.98" y="0.0933333" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TurningPoint1B" sid="237542825743920">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826986370512129" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TurningPoint2B" sid="398004668930505">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="205793573776781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

@@ -40,10 +40,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>0</x>
-                        <y>0</y>
+                        <y>100</y>
                         <z>0</z>
                         <width>1920</width>
-                        <height>1200</height>
+                        <height>1100</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -142,7 +142,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-32</x>
-                        <y>323</y>
+                        <y>400</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -166,8 +166,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>315</x>
-                        <y>1238</y>
+                        <x>375</x>
+                        <y>1318</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -192,7 +192,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1956</x>
-                        <y>876</y>
+                        <y>1050</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -216,38 +216,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1578</x>
-                        <y>-29</y>
+                        <x>1500</x>
+                        <y>51</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParkingSpace" uid="16">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Occupied>nah</Occupied>
-                        <IAM>E</IAM>
-                        <CarAngle>0</CarAngle>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1185.5</x>
-                        <y>370.5</y>
-                        <z>0</z>
-                        <width>193.600006104</width>
-                        <height>129.600006104</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -265,13 +238,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>C</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1187</x>
-                        <y>193</y>
+                        <x>875</x>
+                        <y>230</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -292,13 +265,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>D</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1401</x>
-                        <y>193</y>
+                        <x>1045</x>
+                        <y>230</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -319,20 +292,20 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>F</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>4</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1398</x>
-                        <y>369</y>
+                        <x>1486</x>
+                        <y>740</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>1.570796371</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -346,13 +319,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>L</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1200</x>
-                        <y>1031</y>
+                        <x>880</x>
+                        <y>905</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -373,13 +346,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>K</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1407</x>
-                        <y>1025</y>
+                        <x>1050</x>
+                        <y>905</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -387,168 +360,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParkingSpace" uid="22">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Occupied>nah</Occupied>
-                        <IAM>O</IAM>
-                        <CarAngle>0</CarAngle>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>697</x>
-                        <y>1025</y>
-                        <z>0</z>
-                        <width>193.600006104</width>
-                        <height>129.600006104</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParkingSpace" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Occupied>nah</Occupied>
-                        <IAM>M</IAM>
-                        <CarAngle>0</CarAngle>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>703</x>
-                        <y>853</y>
-                        <z>0</z>
-                        <width>193.600006104</width>
-                        <height>129.600006104</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParkingSpace" uid="24">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Occupied>nah</Occupied>
-                        <IAM>N</IAM>
-                        <CarAngle>0</CarAngle>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>494</x>
-                        <y>859</y>
-                        <z>0</z>
-                        <width>193.600006104</width>
-                        <height>129.600006104</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParkingSpace" uid="25">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Occupied>nah</Occupied>
-                        <IAM>P</IAM>
-                        <CarAngle>0</CarAngle>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>483</x>
-                        <y>1022</y>
-                        <z>0</z>
-                        <width>193.600006104</width>
-                        <height>129.600006104</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParkingSpace" uid="26">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Occupied>nah</Occupied>
-                        <IAM>A</IAM>
-                        <CarAngle>0</CarAngle>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>490</x>
-                        <y>337</y>
-                        <z>0</z>
-                        <width>193.600006104</width>
-                        <height>129.600006104</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParkingSpace" uid="27">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Occupied>nah</Occupied>
-                        <IAM>B</IAM>
-                        <CarAngle>0</CarAngle>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>701</x>
-                        <y>337</y>
-                        <z>0</z>
-                        <width>193.600006104</width>
-                        <height>129.600006104</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -562,13 +373,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>G</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1012</x>
-                        <y>510</y>
+                        <x>511</x>
+                        <y>568</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -589,13 +400,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>H</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1018</x>
-                        <y>708</y>
+                        <x>513</x>
+                        <y>738</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -616,13 +427,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>I</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>3</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1573</x>
-                        <y>513</y>
+                        <x>1351</x>
+                        <y>573</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -643,13 +454,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>J</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>3</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1573</x>
-                        <y>704</y>
+                        <x>1346</x>
+                        <y>740</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -670,13 +481,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>R</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>179</x>
-                        <y>513</y>
+                        <x>364</x>
+                        <y>564</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -697,13 +508,13 @@
                     <instance-variables>
                         <Occupied>nah</Occupied>
                         <IAM>Q</IAM>
-                        <CarAngle>0</CarAngle>
+                        <LANEOCCUPIED>0</LANEOCCUPIED>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>180</x>
-                        <y>702</y>
+                        <x>364</x>
+                        <y>738</y>
                         <z>0</z>
                         <width>193.600006104</width>
                         <height>129.600006104</height>
@@ -724,8 +535,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1700</x>
-                        <y>350</y>
+                        <x>1600</x>
+                        <y>400</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -746,8 +557,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1600</x>
-                        <y>950</y>
+                        <x>1500</x>
+                        <y>1100</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -768,8 +579,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>900</y>
+                        <x>300</x>
+                        <y>1050</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -790,7 +601,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>300</x>
+                        <x>375</x>
                         <y>250</y>
                         <z>0</z>
                         <width>100</width>
@@ -799,6 +610,33 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ParkingSpace" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Occupied>nah</Occupied>
+                        <IAM>H</IAM>
+                        <LANEOCCUPIED>4</LANEOCCUPIED>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1488</x>
+                        <y>568</y>
+                        <z>0</z>
+                        <width>193.600006104</width>
+                        <height>129.600006104</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -878,6 +716,50 @@
                         <z>0</z>
                         <width>300</width>
                         <height>150</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurningPoint1B" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1425</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TurningPoint2B" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1325</x>
+                        <y>1100</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
