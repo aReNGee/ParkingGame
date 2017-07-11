@@ -262,6 +262,36 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
+                                                        <event-block sid="494536562823383">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="128599300441854" type="ParkingSpace">
+                                                                    <param id="0" name="Instance variable">LANEOCCUPIED</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="278994497574182" type="System">
+                                                                    <param id="0" name="Variable">BoolLeftLaneLeftSide</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="295529012634530">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="822950017245317" type="ParkingSpace">
+                                                                    <param id="0" name="Instance variable">LANEOCCUPIED</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="395327987169090" type="System">
+                                                                    <param id="0" name="Variable">BoolLeftLaneRightSide</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                     </sub-events>
                                                 </event-block>
                                             </sub-events>
@@ -733,6 +763,94 @@
         </event-group>
         <event-group description="" sid="127016830129163" title="Dynamic Cycling!">
             <sub-events>
+                <comment>Left Lane Set</comment>
+                <event-block sid="669742058360046">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="231210646941525" type="System">
+                            <param id="0" name="Variable">BoolLeftLaneLeftSide</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <comment>left lane full, go right</comment>
+                <event-block sid="323420268686449">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="928610128189968" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>right lane empty</comment>
+                        <event-block sid="748429551512657">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="428330407736299" type="System">
+                                    <param id="0" name="Variable">BoolLeftLaneRightSide</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="162902684059863" type="TurningPoint3B">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="616683199754760" type="TurningPoint4B">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="728295100685311">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="742791149217272" type="StuffSpawnsHere">
+                                            <param id="0" name="Instance variable">SetRotationTo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">270</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="385771381545813" type="StuffSpawnsHere">
+                                            <param id="0" name="X">500</param>
+                                            <param id="1" name="Y">StuffSpawnsHere.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Left Lane is Full, cars just drive off</comment>
+                        <event-block sid="111985616513618">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="234938146686491" type="System">
+                                    <param id="0" name="Variable">BoolLeftLaneRightSide</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="503828562561644" type="TurningPoint3">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="631627768333717" type="TurningPoint3B">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="746484324752261">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="368938076111018" type="StuffSpawnsHere">
+                                            <param id="0" name="Instance variable">SetRotationTo</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">270</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="564885983959320" type="StuffSpawnsHere" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Right Lane Set</comment>
                 <event-block sid="198240998274581">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="148519324380092" type="System">
@@ -835,6 +953,22 @@
                             <param id="1" name="Y">ElTeleportoB.Y</param>
                         </action>
                         <action id="-8" name="Set angle" sid="576246742109740" type="Car">
+                            <param id="0" name="Angle">Car.Angle+180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="816080020810293">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="431182627249027" type="Car">
+                            <param id="0" name="Object">ElTeleportoC</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="628573802740877" type="Car">
+                            <param id="0" name="X">ElTeleportoD.X</param>
+                            <param id="1" name="Y">ElTeleportoD.Y</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="246669878089213" type="Car">
                             <param id="0" name="Angle">Car.Angle+180</param>
                         </action>
                     </actions>
