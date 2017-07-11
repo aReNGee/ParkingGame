@@ -58,6 +58,7 @@
                 <instance-variable name="UClickedOnThis" sid="654831599933266" type="string" />
                 <instance-variable name="ISpawnedAt" sid="910919643128375" type="string" />
                 <instance-variable name="ImGoingTo" sid="209894194934273" type="string" />
+                <instance-variable name="InSpace" sid="506878346691931" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="739867445271563">
@@ -74,15 +75,19 @@
                         <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="600686345520404" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506667">
-                        <image-point name="Collider Goes Here" x="-0.15" y="0.506667" />
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0.545" y="1" />
-                            <point x="0.545" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="657476506480545" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
+                        <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="573043131229427" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
+                        <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="364139086060165" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
+                        <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -96,6 +101,7 @@
                 <instance-variable name="UClickedOnThis" sid="919709560966675" type="string" />
                 <instance-variable name="ISpawnedAt" sid="998288223014326" type="string" />
                 <instance-variable name="ImGoingTo" sid="826927375553643" type="string" />
+                <instance-variable name="InSpace" sid="157201750913985" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486380985878943" speed="5">
@@ -130,9 +136,19 @@
             <instance-variables>
                 <instance-variable name="Occupied" sid="477650953035717" type="string" />
                 <instance-variable name="IAM" sid="798188447071600" type="string" />
+                <instance-variable name="CarAngle" sid="250862449053442" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493979547585458" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Empty" pingpong="0" repeatcount="1" repeatto="0" sid="959670169021063" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="697979234178450" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Animation4" pingpong="0" repeatcount="1" repeatto="0" sid="487534912397591" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -184,20 +200,20 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846457033826044" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
                         <collision-poly>
-                            <point x="0.0233333" y="0.233333" />
-                            <point x="0.24" y="0.12" />
-                            <point x="0.24" y="0.933333" />
-                            <point x="0.0233333" y="0.773333" />
+                            <point x="0.02" y="0.12" />
+                            <point x="0.25" y="0.12" />
+                            <point x="0.253333" y="0.906667" />
+                            <point x="0.02" y="0.906667" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="846070818335263" speed="5">
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="706540215528709" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.103333" y="0" />
-                            <point x="0.103333" y="0.993333" />
-                            <point x="0" y="1" />
+                            <point x="0.98" y="0.88" />
+                            <point x="0.75" y="0.88" />
+                            <point x="0.746667" y="0.0933334" />
+                            <point x="0.98" y="0.0933333" />
                         </collision-poly>
                     </frame>
                 </animation>
