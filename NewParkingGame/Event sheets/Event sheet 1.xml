@@ -543,6 +543,9 @@
                         <condition id="0" name="On collision with another object" sid="160494398982457" type="Car">
                             <param id="0" name="Object">TurningPoint3</param>
                         </condition>
+                        <condition id="0" name="On collision with another object" sid="574935866123131" type="Car">
+                            <param id="0" name="Object">TurningPoint3B</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-8" name="Set angle" sid="626781054490274" type="Car">
@@ -553,10 +556,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="600273498787572">
+                <event-block any="1" sid="600273498787572">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="712930469245957" type="Car">
                             <param id="0" name="Object">TurningPoint4</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="828857543900990" type="Car">
+                            <param id="0" name="Object">TurningPoint4B</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -812,6 +818,26 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="702277267815933" title="Teleporto">
+            <sub-events>
+                <event-block sid="656789198990446">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="840939222050116" type="Car">
+                            <param id="0" name="Object">ElTeleportoA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="693214024631370" type="Car">
+                            <param id="0" name="X">ElTeleportoB.X</param>
+                            <param id="1" name="Y">ElTeleportoB.Y</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="576246742109740" type="Car">
+                            <param id="0" name="Angle">Car.Angle+180</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
