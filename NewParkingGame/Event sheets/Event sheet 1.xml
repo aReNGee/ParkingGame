@@ -312,6 +312,16 @@
                                                             <param id="0" name="Instance variable">Occupied</param>
                                                             <param id="1" name="Value">&quot;ya&quot;</param>
                                                         </action>
+                                                        <action id="-3" name="Create object" sid="319386869405141" type="System">
+                                                            <param id="0" name="Object to create">Person</param>
+                                                            <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                                                            <param id="2" name="X">Car.ImagePointX(2)</param>
+                                                            <param id="3" name="Y">Car.ImagePointY(2)</param>
+                                                        </action>
+                                                        <action behavior="Pathfinding" id="0" name="Find path" sid="200550046581207" type="Person">
+                                                            <param id="0" name="X">PeopleTarget.X</param>
+                                                            <param id="1" name="Y">PeopleTarget.Y</param>
+                                                        </action>
                                                     </actions>
                                                     <sub-events>
                                                         <event-group description="" sid="545658623766442" title="Making People Happen" />
@@ -1184,5 +1194,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="226725870532882">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="986025519297365" type="Person">
+                    <param id="0" name="Object">WallForPathfinding</param>
+                </condition>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="918168773161968" type="Person" />
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="955211806721453" type="Person">
+                    <param id="0" name="Angle">angle(Person.X,Person.Y,WallForPathfinding.X,WallForPathfinding.Y)</param>
+                    <param id="1" name="Distance">-3</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="497135740491178" type="Person">
+                    <param id="0" name="X">PeopleTarget.X</param>
+                    <param id="1" name="Y">PeopleTarget.Y</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
