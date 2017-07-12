@@ -165,12 +165,7 @@
                                     <param id="2" name="Value">&quot;nah&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="356044049748049" type="ParkingSpace">
-                                    <param id="0" name="Instance variable">Occupied</param>
-                                    <param id="1" name="Value">&quot;ya&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="491032263243896">
                                     <conditions>
@@ -230,9 +225,13 @@
                                                             <param id="0" name="Variable">ThingsOnScreen</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
+                                                        <action id="-10" name="Set value" sid="356044049748049" type="ParkingSpace">
+                                                            <param id="0" name="Instance variable">Occupied</param>
+                                                            <param id="1" name="Value">&quot;ya&quot;</param>
+                                                        </action>
                                                     </actions>
                                                     <sub-events>
-                                                        <event-block sid="920443152615495">
+                                                        <event-block disabled="1" sid="920443152615495">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="689574655426520" type="ParkingSpace">
                                                                     <param id="0" name="Instance variable">LANEOCCUPIED</param>
@@ -247,7 +246,7 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <event-block sid="337417830353102">
+                                                        <event-block disabled="1" sid="337417830353102">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="260785910597057" type="ParkingSpace">
                                                                     <param id="0" name="Instance variable">LANEOCCUPIED</param>
@@ -262,7 +261,7 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <event-block sid="494536562823383">
+                                                        <event-block disabled="1" sid="494536562823383">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="128599300441854" type="ParkingSpace">
                                                                     <param id="0" name="Instance variable">LANEOCCUPIED</param>
@@ -277,7 +276,7 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
-                                                        <event-block sid="295529012634530">
+                                                        <event-block disabled="1" sid="295529012634530">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="822950017245317" type="ParkingSpace">
                                                                     <param id="0" name="Instance variable">LANEOCCUPIED</param>
