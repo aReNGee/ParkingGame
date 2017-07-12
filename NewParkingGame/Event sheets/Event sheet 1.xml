@@ -149,9 +149,79 @@
         </event-group>
         <event-group description="" sid="590457794446726" title="ClickingOnStuff">
             <sub-events>
+                <event-group description="" sid="534594743446970" title="Clicking On Poles">
+                    <sub-events>
+                        <event-block sid="903292585401862">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="892349741412796" type="Touch">
+                                    <param id="0" name="Object">ImAPole</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="116590304845406" type="System">
+                                    <param id="0" name="Variable">CurrentlySelected</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="305947887542411">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="665298161682510" type="System">
+                                            <param id="0" name="Variable">CurrentlySelected</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Bike&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="257703543487259">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="867420063418320" type="System">
+                                                    <param id="0" name="Object">Bike</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="776050188195494">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="990772391558116" type="Bike">
+                                                            <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;yup&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="543025334880243" type="Bike">
+                                                            <param id="0" name="Instance variable">ImGoingTo</param>
+                                                            <param id="1" name="Value">ImAPole.IAM</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="908979428477837" type="Bike">
+                                                            <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                            <param id="1" name="Value">&quot;cant&quot;</param>
+                                                        </action>
+                                                        <action id="-4" name="Set position to another object" sid="939363909397634" type="Bike">
+                                                            <param id="0" name="Object">ImAPole</param>
+                                                            <param id="1" name="Image point (optional)">0</param>
+                                                        </action>
+                                                        <action id="-8" name="Set angle" sid="359627699654934" type="Bike">
+                                                            <param id="0" name="Angle">ImAPole.Angle</param>
+                                                        </action>
+                                                        <action id="-11" name="Subtract from" sid="469673520868565" type="System">
+                                                            <param id="0" name="Variable">ThingsOnScreen</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="676019696203856" title="Clicking On Parking Spaces">
                     <sub-events>
-                        <variable constant="0" name="WhereTheThingWas" sid="488370442107112" static="0" type="number">0</variable>
                         <event-block sid="479050837809878">
                             <conditions>
                                 <condition id="17" name="On tap object" sid="778004635836849" type="Touch">
@@ -200,14 +270,6 @@
                                                         <action id="-10" name="Set value" sid="305014480183380" type="Car">
                                                             <param id="0" name="Instance variable">ImGoingTo</param>
                                                             <param id="1" name="Value">ParkingSpace.IAM</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="742273433782919" type="System">
-                                                            <param id="0" name="Variable">WhereTheThingWas</param>
-                                                            <param id="1" name="Value">find(WeHaveSpawnedStuffAt,Car.ISpawnedAt)</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="310638293358342" type="System">
-                                                            <param id="0" name="Variable">WeHaveSpawnedStuffAt</param>
-                                                            <param id="1" name="Value">replace(WeHaveSpawnedStuffAt,Car.ISpawnedAt,&quot;&quot;)</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="462404825865132" type="Car">
                                                             <param id="0" name="Instance variable">UClickedOnThis</param>
@@ -300,7 +362,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="938028800187132">
+                                <event-block disabled="1" sid="938028800187132">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="755027009978760" type="System">
                                             <param id="0" name="Variable">CurrentlySelected</param>
@@ -310,7 +372,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="373306162457438">
+                                        <event-block disabled="1" sid="373306162457438">
                                             <conditions>
                                                 <condition id="-11" name="For Each" sid="148496292061053" type="System">
                                                     <param id="0" name="Object">Bike</param>
@@ -318,7 +380,7 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="700849068292502">
+                                                <event-block disabled="1" sid="700849068292502">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="455562101069337" type="Bike">
                                                             <param id="0" name="Instance variable">UClickedOnThis</param>
@@ -330,10 +392,6 @@
                                                         <action id="-10" name="Set value" sid="745801516674423" type="Bike">
                                                             <param id="0" name="Instance variable">ImGoingTo</param>
                                                             <param id="1" name="Value">ParkingSpace.IAM</param>
-                                                        </action>
-                                                        <action id="-9" name="Set value" sid="668502279487370" type="System">
-                                                            <param id="0" name="Variable">WhereTheThingWas</param>
-                                                            <param id="1" name="Value">find(WeHaveSpawnedStuffAt,Bike.ISpawnedAt)</param>
                                                         </action>
                                                         <action id="-9" name="Set value" sid="706741785758894" type="System">
                                                             <param id="0" name="Variable">WeHaveSpawnedStuffAt</param>
@@ -454,6 +512,10 @@
                                                     <param id="0" name="Instance variable">UClickedOnThis</param>
                                                     <param id="1" name="Value">&quot;nope&quot;</param>
                                                 </action>
+                                                <action id="4" name="Set animation" sid="773851913871928" type="Bike">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="168625737782741">
@@ -468,6 +530,10 @@
                                                 <action id="-10" name="Set value" sid="307761321069472" type="Bike">
                                                     <param id="0" name="Instance variable">UClickedOnThis</param>
                                                     <param id="1" name="Value">&quot;yup&quot;</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="965563600586073" type="Bike">
+                                                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                                                    <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -782,6 +848,11 @@
                     <conditions>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="877814605162568" type="BikeCollider">
                             <param id="0" name="Object">Car</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="785105446624729" type="Bike">
+                            <param id="0" name="Instance variable">ImGoingTo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
                         </condition>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="655014206649818" type="BikeCollider">
                             <param id="0" name="Object">Bike</param>
