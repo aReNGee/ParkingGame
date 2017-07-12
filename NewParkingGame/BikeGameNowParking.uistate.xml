@@ -51,5 +51,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ImAPole/" />
         <folder expanded="1" path="animation-folder/PeopleTarget/" />
         <folder expanded="1" path="animation-folder/WallForPathfinding/" />
+        <folder expanded="1" path="animation-folder/ThinkyBubble/" />
+        <folder expanded="1" path="animation-folder/ThinkyBubbleBike/" />
     </folders-expanded>
 </c2uistate>

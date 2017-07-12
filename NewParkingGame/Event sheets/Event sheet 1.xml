@@ -92,7 +92,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="776851576447173" type="System">
                                     <param id="0" name="Object to create">Car</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;MovingObject&quot;</param>
                                     <param id="2" name="X">StuffSpawnsHere(SpawnItHere).X</param>
                                     <param id="3" name="Y">StuffSpawnsHere(SpawnItHere).Y</param>
                                 </action>
@@ -112,6 +112,16 @@
                                 <action id="-8" name="Set angle" sid="947112953080697" type="Car">
                                     <param id="0" name="Angle">StuffSpawnsHere(SpawnItHere).SetRotationTo</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="205831861622926" type="Car">
+                                    <param id="0" name="Instance variable">TARGET</param>
+                                    <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="345578521474380" type="PassengerTarget">
+                                    <param id="0" name="Text">Car.TARGET</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="716521261820009" type="PassengerTarget">
+                                    <param id="0" name="Layer">&quot;Text&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="173824933109762">
@@ -121,7 +131,7 @@
                             <actions>
                                 <action id="-3" name="Create object" sid="704973143928430" type="System">
                                     <param id="0" name="Object to create">Bike</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;MovingObject&quot;</param>
                                     <param id="2" name="X">StuffSpawnsHere(SpawnItHere).X</param>
                                     <param id="3" name="Y">StuffSpawnsHere(SpawnItHere).Y</param>
                                 </action>
@@ -140,6 +150,16 @@
                                 </action>
                                 <action disabled="1" id="0" name="Set text" sid="685554782897791" type="Text">
                                     <param id="0" name="Text">choose(&quot;Z&quot;,&quot;X&quot;,&quot;Y&quot;)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="699154054461823" type="Bike">
+                                    <param id="0" name="Instance variable">TARGET</param>
+                                    <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="749629257371663" type="BikeTarget">
+                                    <param id="0" name="Text">Bike.TARGET</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="166434846598689" type="BikeTarget">
+                                    <param id="0" name="Layer">&quot;Text&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -222,9 +242,19 @@
                                                                     <param id="2" name="X">Bike.X</param>
                                                                     <param id="3" name="Y">Bike.Y</param>
                                                                 </action>
-                                                                <action behavior="Pathfinding" id="0" name="Find path" sid="509480094800542" type="Person">
-                                                                    <param id="0" name="X">PeopleTarget.X</param>
-                                                                    <param id="1" name="Y">PeopleTarget.Y</param>
+                                                                <action id="-10" name="Set value" sid="870762413413528" type="Person">
+                                                                    <param id="0" name="Instance variable">GottaGet2</param>
+                                                                    <param id="1" name="Value">Bike.TARGET</param>
+                                                                </action>
+                                                                <action behavior="Pathfinding" id="0" name="Find path" sid="826788523016159" type="Person">
+                                                                    <param id="0" name="X">RealTargets(Person.GottaGet2-1).X</param>
+                                                                    <param id="1" name="Y">RealTargets(Person.GottaGet2-1).Y</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="764930309863834" type="ThinkyBubbleBike">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="-15" name="Set visible" sid="790144089741605" type="BikeTarget">
+                                                                    <param id="0" name="Visibility">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -318,9 +348,19 @@
                                                             <param id="2" name="X">Car.ImagePointX(2)</param>
                                                             <param id="3" name="Y">Car.ImagePointY(2)</param>
                                                         </action>
+                                                        <action id="-10" name="Set value" sid="953084114283384" type="Person">
+                                                            <param id="0" name="Instance variable">GottaGet2</param>
+                                                            <param id="1" name="Value">Car.TARGET</param>
+                                                        </action>
                                                         <action behavior="Pathfinding" id="0" name="Find path" sid="200550046581207" type="Person">
-                                                            <param id="0" name="X">PeopleTarget.X</param>
-                                                            <param id="1" name="Y">PeopleTarget.Y</param>
+                                                            <param id="0" name="X">RealTargets(Person.GottaGet2-1).X</param>
+                                                            <param id="1" name="Y">RealTargets(Person.GottaGet2-1).Y</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="169353079149967" type="ThinkyBubble">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="684172615067270" type="PassengerTarget">
+                                                            <param id="0" name="Visibility">0</param>
                                                         </action>
                                                     </actions>
                                                     <sub-events>
@@ -1174,8 +1214,26 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="734899668145271" title="Things Moving">
+        <event-group description="" sid="734899668145271" title="People Moving">
             <sub-events>
+                <event-block sid="226725870532882">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="986025519297365" type="Person">
+                            <param id="0" name="Object">WallForPathfinding</param>
+                        </condition>
+                        <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="918168773161968" type="Person" />
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="955211806721453" type="Person">
+                            <param id="0" name="Angle">angle(Person.X,Person.Y,WallForPathfinding.X,WallForPathfinding.Y)</param>
+                            <param id="1" name="Distance">-3</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="525218483052320" type="Person">
+                            <param id="0" name="X">RealTargets(Person.GottaGet2-1).X</param>
+                            <param id="1" name="Y">RealTargets(Person.GottaGet2-1).Y</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="506279535554555">
                     <conditions>
                         <condition behavior="Pathfinding" id="0" name="On path found" sid="165017078231391" type="Person" />
@@ -1194,23 +1252,32 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="226725870532882">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="986025519297365" type="Person">
-                    <param id="0" name="Object">WallForPathfinding</param>
-                </condition>
-                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="918168773161968" type="Person" />
-            </conditions>
-            <actions>
-                <action id="-23" name="Move at angle" sid="955211806721453" type="Person">
-                    <param id="0" name="Angle">angle(Person.X,Person.Y,WallForPathfinding.X,WallForPathfinding.Y)</param>
-                    <param id="1" name="Distance">-3</param>
-                </action>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="497135740491178" type="Person">
-                    <param id="0" name="X">PeopleTarget.X</param>
-                    <param id="1" name="Y">PeopleTarget.Y</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="937608984001665" title="ThinkyBubble">
+            <sub-events>
+                <event-block sid="276785112916836">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="268631536305545" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="684916749264554" type="ThinkyBubble">
+                            <param id="0" name="X">Car.X</param>
+                            <param id="1" name="Y">Car.Y-ThinkyBubble.Height</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="167862252157020" type="PassengerTarget">
+                            <param id="0" name="Object">ThinkyBubble</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="730183456674033" type="ThinkyBubbleBike">
+                            <param id="0" name="X">Bike.X</param>
+                            <param id="1" name="Y">Bike.Y-ThinkyBubbleBike.Height</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="782454423586014" type="BikeTarget">
+                            <param id="0" name="Object">ThinkyBubbleBike</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -61,6 +61,7 @@
                 <instance-variable name="ISpawnedAt" sid="910919643128375" type="string" />
                 <instance-variable name="ImGoingTo" sid="209894194934273" type="string" />
                 <instance-variable name="InSpace" sid="506878346691931" type="number" />
+                <instance-variable name="TARGET" sid="314282125370209" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="739867445271563">
@@ -70,6 +71,8 @@
             <container>
                 <type>Car</type>
                 <type>CarCollider</type>
+                <type>ThinkyBubble</type>
+                <type>PassengerTarget</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395792726456731" speed="5">
@@ -120,10 +123,13 @@
                 <instance-variable name="ISpawnedAt" sid="998288223014326" type="string" />
                 <instance-variable name="ImGoingTo" sid="826927375553643" type="string" />
                 <instance-variable name="InSpace" sid="157201750913985" type="number" />
+                <instance-variable name="TARGET" sid="241238425678874" type="number" />
             </instance-variables>
             <container>
                 <type>Bike</type>
                 <type>BikeCollider</type>
+                <type>ThinkyBubbleBike</type>
+                <type>BikeTarget</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486380985878943" speed="5">
@@ -150,6 +156,9 @@
         </object-type>
         <object-type name="Person" sid="730854193257482">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="GottaGet2" sid="272994791807259" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="120212794204518">
                     <behavior id="Pathfinding" />
@@ -246,6 +255,8 @@
             <container>
                 <type>Car</type>
                 <type>CarCollider</type>
+                <type>ThinkyBubble</type>
+                <type>PassengerTarget</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846457033826044" speed="5">
@@ -344,6 +355,8 @@
             <container>
                 <type>Bike</type>
                 <type>BikeCollider</type>
+                <type>ThinkyBubbleBike</type>
+                <type>BikeTarget</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="606354455233250" speed="5">
@@ -390,6 +403,77 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="RealTargets" sid="996910757673338">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ThinkyBubble" sid="326918932840224">
+            <plugin id="Sprite" />
+            <container>
+                <type>Car</type>
+                <type>CarCollider</type>
+                <type>ThinkyBubble</type>
+                <type>PassengerTarget</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="612621623142306" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\thought bubble.png">
+                        <collision-poly>
+                            <point x="0.95" y="0.5" />
+                            <point x="0.83" y="0.83" />
+                            <point x="0.5" y="0.62" />
+                            <point x="0.38" y="0.62" />
+                            <point x="0.05" y="0.5" />
+                            <point x="0.17" y="0.17" />
+                            <point x="0.5" y="0.07" />
+                            <point x="0.81" y="0.19" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PassengerTarget" sid="924397093140321">
+            <plugin id="Text" />
+            <container>
+                <type>Car</type>
+                <type>CarCollider</type>
+                <type>ThinkyBubble</type>
+                <type>PassengerTarget</type>
+            </container>
+        </object-type>
+        <object-type name="ThinkyBubbleBike" sid="110270194196745">
+            <plugin id="Sprite" />
+            <container>
+                <type>Bike</type>
+                <type>BikeCollider</type>
+                <type>ThinkyBubbleBike</type>
+                <type>BikeTarget</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161619086468137" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\thought bubble.png">
+                        <collision-poly>
+                            <point x="0.95" y="0.5" />
+                            <point x="0.83" y="0.83" />
+                            <point x="0.5" y="0.62" />
+                            <point x="0.38" y="0.62" />
+                            <point x="0.05" y="0.5" />
+                            <point x="0.17" y="0.17" />
+                            <point x="0.5" y="0.07" />
+                            <point x="0.81" y="0.19" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BikeTarget" sid="646686207539298">
+            <plugin id="Text" />
+            <container>
+                <type>Bike</type>
+                <type>BikeCollider</type>
+                <type>ThinkyBubbleBike</type>
+                <type>BikeTarget</type>
+            </container>
         </object-type>
     </object-folder>
     <families />
