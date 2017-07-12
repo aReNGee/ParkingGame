@@ -30,7 +30,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-9" name="Set value" sid="414984308519825" type="System">
+                        <action id="-9" name="Set value" sid="414984308519825" type="System">
                             <param id="0" name="Variable">IsItACar</param>
                             <param id="1" name="Value">choose(&quot;yes&quot;, &quot;no&quot;)</param>
                         </action>
@@ -42,7 +42,7 @@
                             <param id="0" name="Variable">DupeChecking</param>
                             <param id="1" name="Value">find(WeHaveSpawnedStuffAt,str(SpawnItHere))</param>
                         </action>
-                        <action id="-9" name="Set value" sid="106186331860988" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="106186331860988" type="System">
                             <param id="0" name="Variable">IsItACar</param>
                             <param id="1" name="Value">&quot;yes&quot;</param>
                         </action>
@@ -128,6 +128,9 @@
                                 <action id="-10" name="Set value" sid="593840557338887" type="Bike">
                                     <param id="0" name="Instance variable">ISpawnedAt</param>
                                     <param id="1" name="Value">SpawnItHere</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="135280650729468" type="Bike">
+                                    <param id="0" name="Angle">StuffSpawnsHere(SpawnItHere).SetRotationTo</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="740934141462340" type="System">
                                     <param id="0" name="Object to create">Text</param>
@@ -531,6 +534,70 @@
         </event-group>
         <event-group description="" sid="805604583590979" title="CarsGoCycle">
             <sub-events>
+                <event-group description="" sid="581670435780084" title="BikeCycle">
+                    <sub-events>
+                        <event-block any="1" sid="824216643933601">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="382793390949818" type="Bike">
+                                    <param id="0" name="Object">TurningPoint1</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="694386487100362" type="Bike">
+                                    <param id="0" name="Object">TurningPoint1B</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="814836383779346" type="Bike">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="659332503791156">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="896544913731043" type="Bike">
+                                    <param id="0" name="Object">TurningPoint2</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="578144766191079" type="Bike">
+                                    <param id="0" name="Object">TurningPoint2B</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="583109907116628" type="Bike">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="363657743985770">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="696055254448530" type="Bike">
+                                    <param id="0" name="Object">TurningPoint3</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="767284087202510" type="Bike">
+                                    <param id="0" name="Object">TurningPoint3B</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="160341292489654" type="Bike">
+                                    <param id="0" name="Angle">270</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="375667220596002">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="193624334476063" type="Bike">
+                                    <param id="0" name="Object">TurningPoint4</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="668673064061176" type="Bike">
+                                    <param id="0" name="Object">TurningPoint4B</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="814977624287490" type="Bike">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block any="1" sid="617704554050744">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="217941460479587" type="Car">
@@ -616,6 +683,9 @@
                             <param id="0" name="Instance variable">ImGoingTo</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="426909219990747" type="CarCollider">
+                            <param id="0" name="Object">Bike</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -706,16 +776,40 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="134972882084340">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="865918358129774" type="Car">
-                    <param id="0" name="Object">Car</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" id="0" name="Stop" sid="256067989568036" type="Car" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="132098121752518" title="BikeCollider">
+            <sub-events>
+                <event-block sid="133342245858201">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="877814605162568" type="BikeCollider">
+                            <param id="0" name="Object">Car</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="655014206649818" type="BikeCollider">
+                            <param id="0" name="Object">Bike</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="699430084272711" type="Bike">
+                            <param id="0" name="Angle">Bike.Angle</param>
+                            <param id="1" name="Distance">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="573223492435276">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="814296742647485" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="607014130115238" type="BikeCollider">
+                            <param id="0" name="X">Bike.X</param>
+                            <param id="1" name="Y">Bike.Y</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="800656577483312" type="BikeCollider">
+                            <param id="0" name="Angle">Bike.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="802773983730480" title="Debugging Parking Spaces">
             <sub-events>
                 <event-block sid="653436765128152">

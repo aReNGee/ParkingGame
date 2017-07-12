@@ -97,11 +97,11 @@
                         <x>2201</x>
                         <y>774</y>
                         <z>0</z>
-                        <width>250</width>
-                        <height>250</height>
+                        <width>143</width>
+                        <height>57</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.496503502</hotspotX>
+                        <hotspotY>0.543859661</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -804,6 +804,33 @@
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BikeCollider" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <UClickedOnThis></UClickedOnThis>
+                        <ISpawnedAt></ISpawnedAt>
+                        <ImGoingTo></ImGoingTo>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2313</x>
+                        <y>-121</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>150</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
