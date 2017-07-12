@@ -96,13 +96,13 @@
                                     <param id="2" name="X">StuffSpawnsHere(SpawnItHere).X</param>
                                     <param id="3" name="Y">StuffSpawnsHere(SpawnItHere).Y</param>
                                 </action>
-                                <action id="-3" name="Create object" sid="127056810188073" type="System">
+                                <action disabled="1" id="-3" name="Create object" sid="127056810188073" type="System">
                                     <param id="0" name="Object to create">Text</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Car.X</param>
                                     <param id="3" name="Y">Car.Y</param>
                                 </action>
-                                <action id="0" name="Set text" sid="502382490416315" type="Text">
+                                <action disabled="1" id="0" name="Set text" sid="502382490416315" type="Text">
                                     <param id="0" name="Text">choose(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="564789431394797" type="Car">
@@ -132,13 +132,13 @@
                                 <action id="-8" name="Set angle" sid="135280650729468" type="Bike">
                                     <param id="0" name="Angle">StuffSpawnsHere(SpawnItHere).SetRotationTo</param>
                                 </action>
-                                <action id="-3" name="Create object" sid="740934141462340" type="System">
+                                <action disabled="1" id="-3" name="Create object" sid="740934141462340" type="System">
                                     <param id="0" name="Object to create">Text</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Bike.X</param>
                                     <param id="3" name="Y">Bike.Y</param>
                                 </action>
-                                <action id="0" name="Set text" sid="685554782897791" type="Text">
+                                <action disabled="1" id="0" name="Set text" sid="685554782897791" type="Text">
                                     <param id="0" name="Text">choose(&quot;Z&quot;,&quot;X&quot;,&quot;Y&quot;)</param>
                                 </action>
                             </actions>
@@ -182,36 +182,54 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="776050188195494">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="990772391558116" type="Bike">
-                                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;yup&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Set value" sid="543025334880243" type="Bike">
-                                                            <param id="0" name="Instance variable">ImGoingTo</param>
-                                                            <param id="1" name="Value">ImAPole.IAM</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="908979428477837" type="Bike">
-                                                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                                                            <param id="1" name="Value">&quot;cant&quot;</param>
-                                                        </action>
-                                                        <action id="-4" name="Set position to another object" sid="939363909397634" type="Bike">
-                                                            <param id="0" name="Object">ImAPole</param>
-                                                            <param id="1" name="Image point (optional)">0</param>
-                                                        </action>
-                                                        <action id="-8" name="Set angle" sid="359627699654934" type="Bike">
-                                                            <param id="0" name="Angle">ImAPole.Angle</param>
-                                                        </action>
-                                                        <action id="-11" name="Subtract from" sid="469673520868565" type="System">
-                                                            <param id="0" name="Variable">ThingsOnScreen</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
+                                                <event-group description="" sid="958723197048256" title="Making Person Happen">
+                                                    <sub-events>
+                                                        <event-block sid="776050188195494">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="990772391558116" type="Bike">
+                                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;yup&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="543025334880243" type="Bike">
+                                                                    <param id="0" name="Instance variable">ImGoingTo</param>
+                                                                    <param id="1" name="Value">ImAPole.IAM</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="908979428477837" type="Bike">
+                                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                                    <param id="1" name="Value">&quot;cant&quot;</param>
+                                                                </action>
+                                                                <action id="-4" name="Set position to another object" sid="939363909397634" type="Bike">
+                                                                    <param id="0" name="Object">ImAPole</param>
+                                                                    <param id="1" name="Image point (optional)">0</param>
+                                                                </action>
+                                                                <action id="-8" name="Set angle" sid="359627699654934" type="Bike">
+                                                                    <param id="0" name="Angle">ImAPole.Angle</param>
+                                                                </action>
+                                                                <action id="-11" name="Subtract from" sid="469673520868565" type="System">
+                                                                    <param id="0" name="Variable">ThingsOnScreen</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="673252891912835" type="Bike">
+                                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="487119337950248" type="System">
+                                                                    <param id="0" name="Object to create">Person</param>
+                                                                    <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                                                                    <param id="2" name="X">Bike.X</param>
+                                                                    <param id="3" name="Y">Bike.Y</param>
+                                                                </action>
+                                                                <action behavior="Pathfinding" id="0" name="Find path" sid="509480094800542" type="Person">
+                                                                    <param id="0" name="X">PeopleTarget.X</param>
+                                                                    <param id="1" name="Y">PeopleTarget.Y</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-group>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
@@ -296,6 +314,7 @@
                                                         </action>
                                                     </actions>
                                                     <sub-events>
+                                                        <event-group description="" sid="545658623766442" title="Making People Happen" />
                                                         <event-block disabled="1" sid="920443152615495">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="689574655426520" type="ParkingSpace">
@@ -753,6 +772,9 @@
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="426909219990747" type="CarCollider">
                             <param id="0" name="Object">Bike</param>
                         </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="748862303892272" type="CarCollider">
+                            <param id="0" name="Object">Person</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="CustomMovement" disabled="1" id="0" name="Stop" sid="232025941888599" type="Car" />
@@ -856,6 +878,9 @@
                         </condition>
                         <condition id="1" inverted="1" name="Is overlapping another object" sid="655014206649818" type="BikeCollider">
                             <param id="0" name="Object">Bike</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="740547793477357" type="BikeCollider">
+                            <param id="0" name="Object">Person</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1135,6 +1160,26 @@
                         <action id="-8" name="Set angle" sid="246669878089213" type="Car">
                             <param id="0" name="Angle">Car.Angle+180</param>
                         </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="734899668145271" title="Things Moving">
+            <sub-events>
+                <event-block sid="506279535554555">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="165017078231391" type="Person" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="812921135018125" type="Person" />
+                    </actions>
+                </event-block>
+                <event-block sid="355333486121009">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="197524773630790" type="Person" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="487110821127576" type="Person" />
                     </actions>
                 </event-block>
             </sub-events>

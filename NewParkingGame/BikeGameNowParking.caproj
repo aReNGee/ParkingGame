@@ -15,7 +15,9 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -44,7 +46,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Sprite" sid="576944961472897">
+        <object-type name="Background" sid="576944961472897">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="497522342621972" speed="5">
@@ -71,13 +73,13 @@
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395792726456731" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.511364" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
-                        <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Car.png">
+                        <image-point name="Collider Goes Here" x="-0.353333" y="0.511111" />
                         <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.810811" y="0" />
-                            <point x="0.810811" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.0132444" y="0.0219753" />
+                            <point x="0.802578" y="0.0219753" />
+                            <point x="0.802578" y="0.978025" />
+                            <point x="0.0132444" y="0.978025" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -121,30 +123,22 @@
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486380985878943" speed="5">
-                    <frame duration="1" hotspotX="0.496504" hotspotY="0.54386" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\bike.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\bike.png">
                         <collision-poly>
-                            <point x="0.216783" y="0.578947" />
-                            <point x="0.013986" y="0.54386" />
-                            <point x="0.202797" y="0.473684" />
-                            <point x="0.496504" y="0.0526316" />
-                            <point x="0.804196" y="0.438596" />
-                            <point x="0.965035" y="0.54386" />
-                            <point x="0.776224" y="0.578947" />
-                            <point x="0.496504" y="0.947368" />
+                            <point x="0" y="0" />
+                            <point x="0.866667" y="0" />
+                            <point x="0.866667" y="1" />
+                            <point x="0" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="680650483791265" speed="5">
-                    <frame duration="1" hotspotX="0.496504" hotspotY="0.54386">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333">
                         <collision-poly>
-                            <point x="0.216783" y="0.578947" />
-                            <point x="0.013986" y="0.54386" />
-                            <point x="0.202797" y="0.473684" />
-                            <point x="0.496504" y="0.0526316" />
-                            <point x="0.804196" y="0.438596" />
-                            <point x="0.965035" y="0.54386" />
-                            <point x="0.776224" y="0.578947" />
-                            <point x="0.496504" y="0.947368" />
+                            <point x="0" y="0" />
+                            <point x="0.866667" y="0" />
+                            <point x="0.866667" y="1" />
+                            <point x="0" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -152,9 +146,21 @@
         </object-type>
         <object-type name="Person" sid="730854193257482">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="120212794204518">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123245996398692" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.304" y="0.308" />
+                            <point x="0.692" y="0.308" />
+                            <point x="0.704" y="0.752" />
+                            <point x="0.256" y="0.744" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -356,6 +362,27 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667721237751003" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PeopleTarget" sid="157332034831307">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796517124041909" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WallForPathfinding" sid="855230336677498">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="250536987677249">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604029563732363" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
