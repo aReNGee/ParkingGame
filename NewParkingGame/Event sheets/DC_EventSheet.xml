@@ -256,11 +256,11 @@
                                                             <param id="0" name="Instance variable">UClickedOnThis</param>
                                                             <param id="1" name="Value">&quot;cant&quot;</param>
                                                         </action>
-                                                        <action id="-11" name="Subtract from" sid="358721744211881" type="System">
+                                                        <action disabled="1" id="-11" name="Subtract from" sid="358721744211881" type="System">
                                                             <param id="0" name="Variable">DC_ThingsOnScreen</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
-                                                        <action id="-10" name="Set value" sid="356044049748049" type="DC_ParkingSpace">
+                                                        <action disabled="1" id="-10" name="Set value" sid="356044049748049" type="DC_ParkingSpace">
                                                             <param id="0" name="Instance variable">Occupied</param>
                                                             <param id="1" name="Value">&quot;ya&quot;</param>
                                                         </action>
@@ -976,6 +976,34 @@
                                                                     <param id="1" name="Value">1</param>
                                                                 </action>
                                                             </actions>
+                                                            <sub-events>
+                                                                <event-block sid="852813952312817">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="863544571958956" type="DC_Car">
+                                                                            <param id="0" name="Instance variable">ParkAt</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">DC_ParkingSpace.IAM</param>
+                                                                        </condition>
+                                                                        <condition id="2" name="Is playing" sid="165865572950571" type="DC_Car">
+                                                                            <param id="0" name="Animation">&quot;Tracking&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="894187275527914" type="DC_Car">
+                                                                            <param id="0" name="Instance variable">ParkAt</param>
+                                                                            <param id="1" name="Value">&quot;&quot;</param>
+                                                                        </action>
+                                                                        <action id="4" name="Set animation" sid="658838065489920" type="DC_Car">
+                                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="475996354608798" type="DC_Car">
+                                                                            <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                                            <param id="1" name="Value">&quot;nope&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
@@ -1073,6 +1101,34 @@
                                                             <param id="1" name="Value">1</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="953043187638316">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="756840550006398" type="DC_Car">
+                                                                    <param id="0" name="Instance variable">ParkAt</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">DC_ParkingSpace.IAM</param>
+                                                                </condition>
+                                                                <condition id="2" name="Is playing" sid="529437041219605" type="DC_Car">
+                                                                    <param id="0" name="Animation">&quot;Tracking&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="441229986101687" type="DC_Car">
+                                                                    <param id="0" name="Instance variable">ParkAt</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="317093102880571" type="DC_Car">
+                                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="977189747926029" type="DC_Car">
+                                                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                                                    <param id="1" name="Value">&quot;nope&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="748400854474882">
                                                     <conditions>
@@ -1374,6 +1430,42 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="215653235931267">
+                    <conditions>
+                        <condition id="0" name="On function" sid="602639293683491" type="Function">
+                            <param id="0" name="Name">&quot;DC_SucksToBeCars&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="250943325976631">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="564361613922743" type="DC_Car">
+                                    <param id="0" name="Instance variable">ParkAt</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="399860278886885" type="DC_Car">
+                                    <param id="0" name="Animation">&quot;Tracking&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="376058345617078" type="DC_Car">
+                                    <param id="0" name="Instance variable">ParkAt</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="635725700960467" type="DC_Car">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="207420529423039" type="DC_Car">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Value">&quot;nope&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <variable comment="Used for player score" constant="0" name="DC_Emissions" sid="712182454398361" static="0" type="number">0</variable>
@@ -1516,6 +1608,18 @@
                                     <param id="0" name="Instance variable">ImGoingTo</param>
                                     <param id="1" name="Value">DC_ParkingSpace.IAM</param>
                                 </action>
+                                <action id="-11" name="Subtract from" sid="279717874032950" type="System">
+                                    <param id="0" name="Variable">DC_ThingsOnScreen</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="719794484977412" type="DC_ParkingSpace">
+                                    <param id="0" name="Instance variable">Occupied</param>
+                                    <param id="1" name="Value">&quot;ya&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="286777873399865" type="Function">
+                                    <param id="0" name="Name">&quot;DC_SucksToBeCars&quot;</param>
+                                    <param id="1" name="Parameter {n}">DC_ParkingSpace.IAM</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1637,6 +1741,10 @@
                                 </action>
                                 <action id="-26" name="Move to layer" sid="358037385659033" type="DC_ThinkyBubble">
                                     <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="278260254642498" type="System">
+                                    <param id="0" name="Variable">DC_ThingsOnScreen</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
