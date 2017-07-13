@@ -10,6 +10,7 @@
     <unique-id>2sab1yq03szi7</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -106,10 +107,16 @@
                         <image-point name="CarDoor" x="0.5" y="0" />
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="364139086060165" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
-                        <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="674615610670647" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111">
+                        <image-point name="Collider Goes Here" x="-0.353333" y="0.511111" />
                         <image-point name="CarDoor" x="0.5" y="0" />
+                        <collision-poly>
+                            <point x="0.0132444" y="0.0219753" />
+                            <point x="0.802578" y="0.0219753" />
+                            <point x="0.802578" y="0.978025" />
+                            <point x="0.0132444" y="0.978025" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -133,12 +140,36 @@
                 <type>BikeTarget</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486380985878943" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\bike.png">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486380985878943" speed="10">
+                    <frame duration="1" hotspotX="0.453333" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BikeMan2.png">
                         <collision-poly>
                             <point x="0" y="0" />
-                            <point x="0.866667" y="0" />
-                            <point x="0.866667" y="1" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.433333" hotspotY="0.522222" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BikeMan1.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.5" original-source="D:\GitHub Repos\WilLauBikeGame\Textures\BikeMan3.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
@@ -150,6 +181,16 @@
                             <point x="0.866667" y="0" />
                             <point x="0.866667" y="1" />
                             <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="255157545157028" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\empty bike.png">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -167,12 +208,12 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="123245996398692" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.588889" original-source="D:\GitHub Repos\CarpoolGame\June15Onwards\Textures\Passengers\Passanger 5.png">
                         <collision-poly>
-                            <point x="0.304" y="0.308" />
-                            <point x="0.692" y="0.308" />
-                            <point x="0.704" y="0.752" />
-                            <point x="0.256" y="0.744" />
+                            <point x="0" y="0.315822" />
+                            <point x="1" y="0.315822" />
+                            <point x="1" y="0.947289" />
+                            <point x="0" y="0.935911" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -490,6 +531,9 @@
         <object-type name="Function" sid="610961058995916">
             <plugin id="Function" />
         </object-type>
+        <object-type name="Audio" sid="532229703086196">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -505,8 +549,35 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="65" />
+        <global-instance type="Audio" uid="66">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="sfx_bikebell.m4a" />
+        <file name="sfx_bikebell.ogg" />
+        <file name="sfx_biketirebrake.m4a" />
+        <file name="sfx_biketirebrake.ogg" />
+        <file name="sfx_carhorn.m4a" />
+        <file name="sfx_carhorn.ogg" />
+        <file name="sfx_carparkingbrake.m4a" />
+        <file name="sfx_carparkingbrake.ogg" />
+        <file name="sfx_citytraffit.m4a" />
+        <file name="sfx_citytraffit.ogg" />
+        <file name="sfx_placingcar.m4a" />
+        <file name="sfx_placingcar.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

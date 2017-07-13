@@ -123,6 +123,15 @@
                                 <action id="-26" name="Move to layer" sid="716521261820009" type="PassengerTarget">
                                     <param id="0" name="Layer">&quot;Text&quot;</param>
                                 </action>
+                                <action id="0" name="Play" sid="131287079592213" type="Audio">
+                                    <param id="0" name="Audio file">sfx_carhorn</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="469994792436960" type="ThinkyBubble">
+                                    <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="173824933109762">
@@ -161,6 +170,15 @@
                                 </action>
                                 <action id="-26" name="Move to layer" sid="166434846598689" type="BikeTarget">
                                     <param id="0" name="Layer">&quot;Text&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="398306313110511" type="Audio">
+                                    <param id="0" name="Audio file">sfx_bikebell</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="245930235702337" type="ThinkyBubbleBike">
+                                    <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -232,7 +250,7 @@
                                                                     <param id="1" name="Image point (optional)">0</param>
                                                                 </action>
                                                                 <action id="-8" name="Set angle" sid="359627699654934" type="Bike">
-                                                                    <param id="0" name="Angle">ImAPole.Angle</param>
+                                                                    <param id="0" name="Angle">ImAPole.Angle-90</param>
                                                                 </action>
                                                                 <action id="-11" name="Subtract from" sid="469673520868565" type="System">
                                                                     <param id="0" name="Variable">ThingsOnScreen</param>
@@ -261,6 +279,16 @@
                                                                 </action>
                                                                 <action id="-15" name="Set visible" sid="790144089741605" type="BikeTarget">
                                                                     <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="865757097583861" type="Audio">
+                                                                    <param id="0" name="Audio file">sfx_placingcar</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="344342021773285" type="Bike">
+                                                                    <param id="0" name="Animation">&quot;Parked&quot;</param>
+                                                                    <param id="1" name="From">1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -371,6 +399,12 @@
                                                         <action id="-11" name="Subtract from" sid="681774244654300" type="System">
                                                             <param id="0" name="Variable">EmptyParkingSpaces</param>
                                                             <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="0" name="Play" sid="755112157035690" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_carparkingbrake</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                         </action>
                                                     </actions>
                                                     <sub-events>
@@ -1482,20 +1516,7 @@
                                     <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="216935049665693" type="Function">
-                                    <param id="0" name="Name">&quot;FindFilledSpaces&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-9" name="Set value" sid="478316169626193" type="System">
-                                    <param id="0" name="Variable">ThisIsTheSpaceWeWant</param>
-                                    <param id="1" name="Value">round(random(EmptyParkingSpaces))</param>
-                                </action>
-                                <action id="0" name="Call function" sid="657517651931968" type="Function">
-                                    <param id="0" name="Name">&quot;FindTheNumberOfTheSpace&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="446449049010173">
                                     <conditions>
@@ -1503,7 +1524,20 @@
                                             <param id="0" name="Count">4-EmptyParkingSpaces</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="216935049665693" type="Function">
+                                            <param id="0" name="Name">&quot;FindFilledSpaces&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="478316169626193" type="System">
+                                            <param id="0" name="Variable">ThisIsTheSpaceWeWant</param>
+                                            <param id="1" name="Value">round(random(EmptyParkingSpaces))</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="657517651931968" type="Function">
+                                            <param id="0" name="Name">&quot;FindTheNumberOfTheSpace&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="107961343081288">
                                             <conditions>
@@ -1931,6 +1965,13 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="274552297353132" type="Car" />
+                        <action id="33" name="Stop all" sid="274116054624000" type="Audio" />
+                        <action id="0" name="Play" sid="123958668030553" type="Audio">
+                            <param id="0" name="Audio file">sfx_citytraffit</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="944398035823611">
