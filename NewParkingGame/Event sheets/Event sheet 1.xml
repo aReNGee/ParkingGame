@@ -844,7 +844,7 @@
                         </action>
                         <action id="-23" name="Move at angle" sid="645273293744719" type="Car">
                             <param id="0" name="Angle">Car.Angle</param>
-                            <param id="1" name="Distance">5</param>
+                            <param id="1" name="Distance">300 * dt</param>
                         </action>
                     </actions>
                 </event-block>
@@ -946,7 +946,7 @@
                     <actions>
                         <action id="-23" name="Move at angle" sid="699430084272711" type="Bike">
                             <param id="0" name="Angle">Bike.Angle</param>
-                            <param id="1" name="Distance">5</param>
+                            <param id="1" name="Distance">300 * dt</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1375,7 +1375,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="989163846517979" type="System">
                                                             <param id="0" name="Object to create">BlockingCar</param>
-                                                            <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                                                            <param id="1" name="Layer">&quot;LowerLayer&quot;</param>
                                                             <param id="2" name="X">ParkingSpace.X</param>
                                                             <param id="3" name="Y">ParkingSpace.Y</param>
                                                         </action>
