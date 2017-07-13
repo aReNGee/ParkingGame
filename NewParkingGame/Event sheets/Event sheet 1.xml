@@ -1290,6 +1290,7 @@
             </sub-events>
         </event-group>
         <variable constant="0" name="EmptyParkingSpaces" sid="534104799120733" static="0" type="number">12</variable>
+        <variable comment="counter variable inside of EmptySpaces" constant="0" name="ThisIsTheSpaceWeWant" sid="496862046214448" static="0" type="number">0</variable>
         <variable constant="0" name="LOOKATTHIS" sid="687783151192061" static="0" type="text"></variable>
         <event-group description="CarsDissapear" sid="292458554947269" title="EveryFourSeconds">
             <sub-events>
@@ -1307,10 +1308,6 @@
                         <action disabled="1" id="-9" name="Set value" sid="474180738799441" type="System">
                             <param id="0" name="Variable">TempParking</param>
                             <param id="1" name="Value">EXPERIMENTAL_ARRAY_ACTION</param>
-                        </action>
-                        <action id="0" name="Call function" sid="781020527429577" type="Function">
-                            <param id="0" name="Name">&quot;FindEmptySpaces&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1335,18 +1332,35 @@
                                             <param id="0" name="Variable">TempParking</param>
                                             <param id="1" name="Value">find(TempParking,&quot;n&quot;)</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="781020527429577" type="Function">
+                                            <param id="0" name="Name">&quot;FindEmptySpaces&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="317068710137809" type="System">
+                                            <param id="0" name="Variable">ThisIsTheSpaceWeWant</param>
+                                            <param id="1" name="Value">round(random(EmptyParkingSpaces))</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="447241485068000" type="Function">
+                                            <param id="0" name="Name">&quot;FindTheNumberOfTheSpace&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="330452935873797">
                                             <conditions>
-                                                <condition id="-16" name="Pick random instance" sid="955928423948780" type="System">
+                                                <condition id="-13" name="Pick nth instance" sid="955928423948780" type="System">
                                                     <param id="0" name="Object">ParkingSpace</param>
+                                                    <param id="1" name="Instance">PickThisSpace</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-9" name="Set value" sid="490664233496420" type="System">
                                                     <param id="0" name="Variable">LOOKATTHIS</param>
                                                     <param id="1" name="Value">ParkingSpace.Occupied</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="511382778579111" type="System">
+                                                    <param id="0" name="Variable">BoolLeftLaneLeftSide</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
@@ -1657,6 +1671,7 @@
         <variable comment="holds the interior temp values of parkingspaces" constant="0" name="TempParking" sid="528443490373374" static="0" type="text"></variable>
         <variable comment="holds the number for reference of parking spaces that are empty" constant="0" name="EmptySpaces" sid="770480036043590" static="0" type="text"></variable>
         <variable comment="since tempparking is a temp variable, holds the full number of characters from the front" constant="0" name="FullNumber" sid="460086929075606" static="0" type="number">0</variable>
+        <variable comment="The space that we are going to fill/empty" constant="0" name="PickThisSpace" sid="593806273925485" static="0" type="number">0</variable>
         <event-group description="n is empty, y is Full, B is blocked (blue car)" sid="330082048489795" title="Creating the Parking Array">
             <sub-events>
                 <event-block sid="622695436034994">
@@ -1744,5 +1759,49 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="616444028077072">
+            <conditions>
+                <condition id="0" name="On function" sid="686478335207354" type="Function">
+                    <param id="0" name="Name">&quot;FindTheNumberOfTheSpace&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="501768536075917">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="455115647061347" type="System">
+                            <param id="0" name="Count">ThisIsTheSpaceWeWant</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="625963424658418" type="System">
+                            <param id="0" name="Variable">SubArrayParking</param>
+                            <param id="1" name="Value">find(EmptySpaces,&quot;|&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="895032367397720" type="System">
+                            <param id="0" name="Variable">EmptySpaces</param>
+                            <param id="1" name="Value">mid(EmptySpaces,SubArrayParking+1,len(EmptySpaces)-SubArrayParking-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="237502111232773">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="305428127934730" type="System">
+                            <param id="0" name="Variable">SubArrayParking</param>
+                            <param id="1" name="Value">find(EmptySpaces,&quot;|&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="993085227744332" type="System">
+                            <param id="0" name="Variable">PickThisSpace</param>
+                            <param id="1" name="Value">int(left(EmptySpaces,SubArrayParking))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="592293322893844" type="System">
+                            <param id="0" name="Variable">WeHaveSpawnedStuffAt</param>
+                            <param id="1" name="Value">left(EmptySpaces,SubArrayParking)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
