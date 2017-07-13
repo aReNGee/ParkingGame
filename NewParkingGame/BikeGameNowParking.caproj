@@ -64,6 +64,9 @@
                 <instance-variable name="ImGoingTo" sid="209894194934273" type="string" />
                 <instance-variable name="InSpace" sid="506878346691931" type="number" />
                 <instance-variable name="TARGET" sid="314282125370209" type="number" />
+                <instance-variable comment="Parking Space Location" name="PSpaceX" sid="441006157933109" type="number" />
+                <instance-variable comment="Parking Space Location" name="PSpaceY" sid="935620126704177" type="number" />
+                <instance-variable name="ParkAt" sid="763979323140175" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="739867445271563">
@@ -119,6 +122,18 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="Tracking" pingpong="0" repeatcount="1" repeatto="0" sid="250441200867273" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511364">
+                        <image-point name="Collider Goes Here" x="-0.378378" y="0.511364" />
+                        <image-point name="CarDoor" x="0.5" y="0" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.810811" y="0" />
+                            <point x="0.810811" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Text" sid="687777089474156">
@@ -132,6 +147,7 @@
                 <instance-variable name="ImGoingTo" sid="826927375553643" type="string" />
                 <instance-variable name="InSpace" sid="157201750913985" type="number" />
                 <instance-variable name="TARGET" sid="241238425678874" type="number" />
+                <instance-variable name="ParkAT" sid="131935632774386" type="string" />
             </instance-variables>
             <container>
                 <type>Bike</type>
@@ -174,16 +190,6 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="680650483791265" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.866667" y="0" />
-                            <point x="0.866667" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
                 <animation framecount="1" loop="0" name="Parked" pingpong="0" repeatcount="1" repeatto="0" sid="255157545157028" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Secondary Downloads\empty bike.png">
                         <collision-poly>
@@ -191,6 +197,74 @@
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                             <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="640924234262481" speed="10">
+                    <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.433333" hotspotY="0.522222">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Going" pingpong="0" repeatcount="1" repeatto="0" sid="468901336063799" speed="10">
+                    <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.433333" hotspotY="0.522222">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.453333" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.8" y="0" />
+                            <point x="0.8" y="1" />
+                            <point x="0" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -533,6 +607,31 @@
         </object-type>
         <object-type name="Audio" sid="532229703086196">
             <plugin id="Audio" />
+        </object-type>
+        <object-type name="ParkTrigger" sid="459586250993095">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Location" name="IAMTOO" sid="932954324976652" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846633587180005" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BikeTrigger" sid="460444905001623">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Location" name="IAMTOO" sid="394978679374260" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="953695145952859" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TempScoreThingy" sid="273734261850053">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

@@ -237,57 +237,16 @@
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
-                                                                <action id="-10" name="Set value" sid="543025334880243" type="Bike">
-                                                                    <param id="0" name="Instance variable">ImGoingTo</param>
-                                                                    <param id="1" name="Value">ImAPole.IAM</param>
-                                                                </action>
                                                                 <action id="-10" name="Set value" sid="908979428477837" type="Bike">
                                                                     <param id="0" name="Instance variable">UClickedOnThis</param>
                                                                     <param id="1" name="Value">&quot;cant&quot;</param>
                                                                 </action>
-                                                                <action id="-4" name="Set position to another object" sid="939363909397634" type="Bike">
-                                                                    <param id="0" name="Object">ImAPole</param>
-                                                                    <param id="1" name="Image point (optional)">0</param>
+                                                                <action id="-10" name="Set value" sid="704393509291347" type="Bike">
+                                                                    <param id="0" name="Instance variable">ParkAT</param>
+                                                                    <param id="1" name="Value">ImAPole.IAM</param>
                                                                 </action>
-                                                                <action id="-8" name="Set angle" sid="359627699654934" type="Bike">
-                                                                    <param id="0" name="Angle">ImAPole.Angle-90</param>
-                                                                </action>
-                                                                <action id="-11" name="Subtract from" sid="469673520868565" type="System">
-                                                                    <param id="0" name="Variable">ThingsOnScreen</param>
-                                                                    <param id="1" name="Value">1</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="673252891912835" type="Bike">
-                                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="487119337950248" type="System">
-                                                                    <param id="0" name="Object to create">Person</param>
-                                                                    <param id="1" name="Layer">&quot;MovingObject&quot;</param>
-                                                                    <param id="2" name="X">Bike.X</param>
-                                                                    <param id="3" name="Y">Bike.Y</param>
-                                                                </action>
-                                                                <action id="-10" name="Set value" sid="870762413413528" type="Person">
-                                                                    <param id="0" name="Instance variable">GottaGet2</param>
-                                                                    <param id="1" name="Value">Bike.TARGET</param>
-                                                                </action>
-                                                                <action behavior="Pathfinding" id="0" name="Find path" sid="826788523016159" type="Person">
-                                                                    <param id="0" name="X">RealTargets(Person.GottaGet2-1).X</param>
-                                                                    <param id="1" name="Y">RealTargets(Person.GottaGet2-1).Y</param>
-                                                                </action>
-                                                                <action id="-15" name="Set visible" sid="764930309863834" type="ThinkyBubbleBike">
-                                                                    <param id="0" name="Visibility">0</param>
-                                                                </action>
-                                                                <action id="-15" name="Set visible" sid="790144089741605" type="BikeTarget">
-                                                                    <param id="0" name="Visibility">0</param>
-                                                                </action>
-                                                                <action id="0" name="Play" sid="865757097583861" type="Audio">
-                                                                    <param id="0" name="Audio file">sfx_placingcar</param>
-                                                                    <param id="2" name="Loop">0</param>
-                                                                    <param id="3" name="Volume">0</param>
-                                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="344342021773285" type="Bike">
-                                                                    <param id="0" name="Animation">&quot;Parked&quot;</param>
+                                                                <action id="4" name="Set animation" sid="351173768396893" type="Bike">
+                                                                    <param id="0" name="Animation">&quot;Going&quot;</param>
                                                                     <param id="1" name="From">1</param>
                                                                 </action>
                                                             </actions>
@@ -349,24 +308,9 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-10" name="Set value" sid="305014480183380" type="Car">
-                                                            <param id="0" name="Instance variable">ImGoingTo</param>
-                                                            <param id="1" name="Value">ParkingSpace.IAM</param>
-                                                        </action>
                                                         <action id="-10" name="Set value" sid="462404825865132" type="Car">
                                                             <param id="0" name="Instance variable">UClickedOnThis</param>
                                                             <param id="1" name="Value">&quot;cant&quot;</param>
-                                                        </action>
-                                                        <action id="-4" name="Set position to another object" sid="982613528854043" type="Car">
-                                                            <param id="0" name="Object">ParkingSpace</param>
-                                                            <param id="1" name="Image point (optional)">0</param>
-                                                        </action>
-                                                        <action id="-8" name="Set angle" sid="546213092433911" type="Car">
-                                                            <param id="0" name="Angle">ParkingSpace.Angle</param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="767661592040931" type="Car">
-                                                            <param id="0" name="Animation">&quot;Parked&quot;</param>
-                                                            <param id="1" name="From">1</param>
                                                         </action>
                                                         <action id="-11" name="Subtract from" sid="358721744211881" type="System">
                                                             <param id="0" name="Variable">ThingsOnScreen</param>
@@ -376,35 +320,66 @@
                                                             <param id="0" name="Instance variable">Occupied</param>
                                                             <param id="1" name="Value">&quot;ya&quot;</param>
                                                         </action>
-                                                        <action id="-3" name="Create object" sid="319386869405141" type="System">
+                                                        <action disabled="1" id="-10" name="Set value" sid="305014480183380" type="Car">
+                                                            <param id="0" name="Instance variable">ImGoingTo</param>
+                                                            <param id="1" name="Value">ParkingSpace.IAM</param>
+                                                        </action>
+                                                        <action disabled="1" id="-11" name="Subtract from" sid="681774244654300" type="System">
+                                                            <param id="0" name="Variable">EmptyParkingSpaces</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action disabled="1" id="0" name="Play" sid="755112157035690" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_carparkingbrake</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action disabled="1" id="-4" name="Set position to another object" sid="982613528854043" type="Car">
+                                                            <param id="0" name="Object">ParkingSpace</param>
+                                                            <param id="1" name="Image point (optional)">0</param>
+                                                        </action>
+                                                        <action disabled="1" id="-8" name="Set angle" sid="546213092433911" type="Car">
+                                                            <param id="0" name="Angle">ParkingSpace.Angle</param>
+                                                        </action>
+                                                        <action disabled="1" id="4" name="Set animation" sid="767661592040931" type="Car">
+                                                            <param id="0" name="Animation">&quot;Parked&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action disabled="1" id="-3" name="Create object" sid="319386869405141" type="System">
                                                             <param id="0" name="Object to create">Person</param>
                                                             <param id="1" name="Layer">&quot;MovingObject&quot;</param>
                                                             <param id="2" name="X">Car.ImagePointX(2)</param>
                                                             <param id="3" name="Y">Car.ImagePointY(2)</param>
                                                         </action>
-                                                        <action id="-10" name="Set value" sid="953084114283384" type="Person">
+                                                        <action disabled="1" id="-10" name="Set value" sid="953084114283384" type="Person">
                                                             <param id="0" name="Instance variable">GottaGet2</param>
                                                             <param id="1" name="Value">Car.TARGET</param>
                                                         </action>
-                                                        <action behavior="Pathfinding" id="0" name="Find path" sid="200550046581207" type="Person">
+                                                        <action behavior="Pathfinding" disabled="1" id="0" name="Find path" sid="200550046581207" type="Person">
                                                             <param id="0" name="X">RealTargets(Person.GottaGet2-1).X</param>
                                                             <param id="1" name="Y">RealTargets(Person.GottaGet2-1).Y</param>
                                                         </action>
-                                                        <action id="-15" name="Set visible" sid="169353079149967" type="ThinkyBubble">
+                                                        <action disabled="1" id="-15" name="Set visible" sid="169353079149967" type="ThinkyBubble">
                                                             <param id="0" name="Visibility">0</param>
                                                         </action>
-                                                        <action id="-15" name="Set visible" sid="684172615067270" type="PassengerTarget">
+                                                        <action disabled="1" id="-15" name="Set visible" sid="684172615067270" type="PassengerTarget">
                                                             <param id="0" name="Visibility">0</param>
                                                         </action>
-                                                        <action id="-11" name="Subtract from" sid="681774244654300" type="System">
-                                                            <param id="0" name="Variable">EmptyParkingSpaces</param>
-                                                            <param id="1" name="Value">1</param>
+                                                        <action disabled="1" id="-10" name="Set value" sid="824048562387527" type="Car">
+                                                            <param id="0" name="Instance variable">PSpaceX</param>
+                                                            <param id="1" name="Value">ParkingSpace.X</param>
                                                         </action>
-                                                        <action id="0" name="Play" sid="755112157035690" type="Audio">
-                                                            <param id="0" name="Audio file">sfx_carparkingbrake</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        <action disabled="1" id="-10" name="Set value" sid="524006283912509" type="Car">
+                                                            <param id="0" name="Instance variable">PSpaceY</param>
+                                                            <param id="1" name="Value">ParkingSpace.Y</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="874132582838494" type="Car">
+                                                            <param id="0" name="Instance variable">ParkAt</param>
+                                                            <param id="1" name="Value">ParkingSpace.IAM</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="840825277197961" type="Car">
+                                                            <param id="0" name="Animation">&quot;Tracking&quot;</param>
+                                                            <param id="1" name="From">1</param>
                                                         </action>
                                                     </actions>
                                                     <sub-events>
@@ -1956,6 +1931,7 @@
             </sub-events>
         </event-group>
         <variable comment="Used for player score" constant="0" name="Emissions" sid="712182454398361" static="0" type="number">0</variable>
+        <variable comment="Used for player score" constant="0" name="TempTimer" sid="689851913954093" static="0" type="number">30</variable>
         <event-group description="" sid="771984175435301" title="Scoring">
             <sub-events>
                 <comment>deletes the car we built as a reference</comment>
@@ -1972,6 +1948,9 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
+                        <action id="0" name="Set text" sid="367851227486036" type="TempScoreThingy">
+                            <param id="0" name="Text">&quot;Timer: &quot; &amp; TempTimer &amp; &quot; Emissions: &quot; &amp; Emissions</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="944398035823611">
@@ -1979,8 +1958,18 @@
                         <condition id="-6" name="Every X seconds" sid="370783039123316" type="System">
                             <param id="0" name="Interval (seconds)">1.0</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="529060781298867" type="System">
+                            <param id="0" name="Variable">TempTimer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="402706693460515" type="System">
+                            <param id="0" name="Variable">TempTimer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="528764085348878">
                             <conditions>
@@ -1997,6 +1986,164 @@
                                 <action id="-10" name="Add to" sid="850139669270549" type="System">
                                     <param id="0" name="Variable">Emissions</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="622225963289284">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="875301057759801" type="TempScoreThingy">
+                                    <param id="0" name="Text">&quot;Timer: &quot; &amp; TempTimer &amp; &quot;        Emissions: &quot; &amp; Emissions</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="and the bike" sid="229903384352168" title="Making the Cars Park">
+            <sub-events>
+                <event-block sid="870776926364597">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="608298883006713" type="Car">
+                            <param id="0" name="Object">ParkTrigger</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="139406608484455" type="Car">
+                            <param id="0" name="Instance variable">ParkAt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ParkTrigger.IAMTOO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="164304264107224">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="756388884758514" type="ParkingSpace">
+                                    <param id="0" name="Instance variable">IAM</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ParkTrigger.IAMTOO</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="841318047907539" type="Car">
+                                    <param id="0" name="Object">ParkingSpace</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="565976200841853" type="Car">
+                                    <param id="0" name="Angle">ParkingSpace.Angle</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="536121363953286" type="Car">
+                                    <param id="0" name="Animation">&quot;Parked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="750224162177580" type="System">
+                                    <param id="0" name="Object to create">Person</param>
+                                    <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                                    <param id="2" name="X">Car.ImagePointX(2)</param>
+                                    <param id="3" name="Y">Car.ImagePointY(2)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="635781087065822" type="Person">
+                                    <param id="0" name="Instance variable">GottaGet2</param>
+                                    <param id="1" name="Value">Car.TARGET</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="625709270415473" type="Person">
+                                    <param id="0" name="X">RealTargets(Person.GottaGet2-1).X</param>
+                                    <param id="1" name="Y">RealTargets(Person.GottaGet2-1).Y</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="183253793108022" type="ThinkyBubble">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="296868318984357" type="PassengerTarget">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="141166013095430" type="System">
+                                    <param id="0" name="Variable">EmptyParkingSpaces</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="607570642962934" type="Audio">
+                                    <param id="0" name="Audio file">sfx_carparkingbrake</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="644344793342905" type="Car">
+                                    <param id="0" name="Instance variable">ImGoingTo</param>
+                                    <param id="1" name="Value">ParkingSpace.IAM</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="626378422598335">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="133822852734061" type="Bike">
+                            <param id="0" name="Object">BikeTrigger</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="440824781205100" type="Bike">
+                            <param id="0" name="Instance variable">ParkAT</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">BikeTrigger.IAMTOO</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="213150277226457">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="640778920034911" type="ImAPole">
+                                    <param id="0" name="Instance variable">IAM</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">BikeTrigger.IAMTOO</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="126055130889658" type="Bike">
+                                    <param id="0" name="Object">ImAPole</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="514094794295766" type="Bike">
+                                    <param id="0" name="Angle">ImAPole.Angle-90</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="907918799461825" type="System">
+                                    <param id="0" name="Variable">ThingsOnScreen</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="522497429392839" type="Bike">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="447618681151671" type="System">
+                                    <param id="0" name="Object to create">Person</param>
+                                    <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                                    <param id="2" name="X">Bike.X</param>
+                                    <param id="3" name="Y">Bike.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="509840841513350" type="Person">
+                                    <param id="0" name="Instance variable">GottaGet2</param>
+                                    <param id="1" name="Value">Bike.TARGET</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="717680145300867" type="Person">
+                                    <param id="0" name="X">RealTargets(Person.GottaGet2-1).X</param>
+                                    <param id="1" name="Y">RealTargets(Person.GottaGet2-1).Y</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="374628020632307" type="ThinkyBubbleBike">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="153393382845684" type="BikeTarget">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="782492925501597" type="Audio">
+                                    <param id="0" name="Audio file">sfx_placingcar</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="392138294320808" type="Bike">
+                                    <param id="0" name="Animation">&quot;Parked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="955239444500543" type="Bike">
+                                    <param id="0" name="Instance variable">ImGoingTo</param>
+                                    <param id="1" name="Value">ImAPole.IAM</param>
                                 </action>
                             </actions>
                         </event-block>
