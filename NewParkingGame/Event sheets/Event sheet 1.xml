@@ -1921,5 +1921,47 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <variable comment="Used for player score" constant="0" name="Emissions" sid="712182454398361" static="0" type="number">0</variable>
+        <event-group description="" sid="771984175435301" title="Scoring">
+            <sub-events>
+                <comment>deletes the car we built as a reference</comment>
+                <event-block sid="789688674173684">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="766651593295885" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="274552297353132" type="Car" />
+                    </actions>
+                </event-block>
+                <event-block sid="944398035823611">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="370783039123316" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="528764085348878">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="525115797385671" type="System">
+                                    <param id="0" name="Object">Car</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="178651336745979" type="Car">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;cant&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="850139669270549" type="System">
+                                    <param id="0" name="Variable">Emissions</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
