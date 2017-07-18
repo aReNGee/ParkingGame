@@ -1905,6 +1905,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1932,6 +1944,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1959,6 +1983,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1986,6 +2022,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2013,6 +2061,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2040,6 +2100,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2067,6 +2139,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2094,6 +2178,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2121,6 +2217,18 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>5</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>5</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2512,7 +2620,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
                 <instance type="DC_BlackBox" uid="282">
@@ -2534,7 +2642,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
                 <instance type="DC_BlackBox" uid="284">
@@ -2556,7 +2664,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
                 <instance type="DC_BlackBox" uid="287">
@@ -2578,7 +2686,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
                 <instance type="DC_TapToContinue" uid="290">
@@ -2596,10 +2704,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>275</x>
+                        <x>18</x>
                         <y>1091</y>
                         <z>0</z>
-                        <width>1345</width>
+                        <width>1786</width>
                         <height>136</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2654,7 +2762,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
             </instances>

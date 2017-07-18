@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DC_EventSheet</name>
     <events>
+        <variable comment="1 is easy, 2 is med, 4 is hard" constant="0" name="DC_OfficialDifficulty" sid="599313801733944" static="0" type="number">1</variable>
         <variable comment="Default Value 6" constant="0" name="DC_CarsLeftToSpawn" sid="845113707372006" static="0" type="number">6</variable>
         <variable comment="Default Value 3" constant="0" name="DC_BikesLeftToSpawn" sid="430506560562796" static="0" type="number">3</variable>
         <variable comment="represents the parking spaces" constant="0" name="DC_EXPERIMENTAL_ARRAY_ACTION" sid="180508569474533" static="0" type="text">EEEEEEEEEEEE</variable>
@@ -17,8 +18,10 @@
             <sub-events>
                 <event-block sid="528000633399566">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="951105900583345" type="System">
-                            <param id="0" name="Interval (seconds)">3</param>
+                        <condition id="-8" name="Compare two values" sid="951105900583345" type="System">
+                            <param id="0" name="First value">time</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">DC_TimeInterval+3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="447523019554949" type="System">
                             <param id="0" name="Variable">DC_ThingsOnScreen</param>
@@ -34,6 +37,10 @@
                         <action id="-9" name="Set value" sid="275779445932709" type="System">
                             <param id="0" name="Variable">DC_SpawnItHere</param>
                             <param id="1" name="Value">choose(0,1,2,3)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="620485619983717" type="System">
+                            <param id="0" name="Variable">DC_TimeInterval</param>
+                            <param id="1" name="Value">time</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1537,6 +1544,10 @@
                         <action id="0" name="Set text" sid="367851227486036" type="DC_TempScoreThingy">
                             <param id="0" name="Text">&quot;Timer: &quot; &amp; DC_TempTimer &amp; &quot; Emissions: &quot; &amp; DC_Emissions</param>
                         </action>
+                        <action id="-27" name="Set effect enabled" sid="278094698652822" type="DC_RealTargets">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Warp&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="944398035823611">
@@ -1760,7 +1771,7 @@
                         <event-block sid="883963604370538">
                             <conditions>
                                 <condition id="-12" name="Repeat" sid="790287605770853" type="System">
-                                    <param id="0" name="Count">4</param>
+                                    <param id="0" name="Count">DC_OfficialDifficulty</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1943,7 +1954,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="770569345432754" type="System">
-                            <param id="0" name="Layout">DC_Tutorial_1</param>
+                            <param id="0" name="Layout">DC_MainGame</param>
                         </action>
                     </actions>
                 </event-block>
