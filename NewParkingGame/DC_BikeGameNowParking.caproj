@@ -721,6 +721,46 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Tutorial Stuff">
+            <object-type name="DC_BlackBox" sid="991842008990588">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="143857742939285" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DC_HoleBox" sid="919843126319836">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="429747322678363" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DC_BlackBox2" sid="139841523310451">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871169404961997" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DC_BlackBox3" sid="861454395324002">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179763625479455" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DC_TapToContinue" sid="388808118468430">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="DC_TutorialText" sid="342649323329851">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Touch" sid="756214668351968">
             <plugin id="Touch" />
         </object-type>
@@ -741,10 +781,13 @@
     </object-folder>
     <families />
     <layout-folder>
+        <layout>DC_Tutorial_1.xml</layout>
+        <layout>DC_Tutorial_2.xml</layout>
         <layout>DC_MainGame.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>DC_EventSheet.xml</event-sheet>
+        <event-sheet>DC_Tutorial.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="5">

@@ -1943,7 +1943,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="770569345432754" type="System">
-                            <param id="0" name="Layout">DC_MainGame</param>
+                            <param id="0" name="Layout">DC_Tutorial_1</param>
                         </action>
                     </actions>
                 </event-block>

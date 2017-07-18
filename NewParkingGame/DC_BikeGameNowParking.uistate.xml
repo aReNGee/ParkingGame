@@ -10,8 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">DC_MainGame</layout>
-        <event-sheet active="1" order="1">DC_EventSheet</event-sheet>
+        <layout order="3">DC_Tutorial_1</layout>
+        <layout order="2">DC_MainGame</layout>
+        <layout active="1" order="4">DC_Tutorial_2</layout>
+        <event-sheet order="0">DC_EventSheet</event-sheet>
+        <event-sheet order="1">DC_Tutorial</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,6 +30,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/Uninteractable/" />
         <folder expanded="0" path="object-folder/Clicky/" />
         <folder expanded="1" path="object-folder/Endgame/" />
+        <folder expanded="1" path="object-folder/Tutorial Stuff/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -61,6 +65,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DC_PaintItBlack/" />
         <folder expanded="1" path="animation-folder/DC_Exit/" />
         <folder expanded="1" path="animation-folder/DC_Take2/" />
+        <folder expanded="1" path="animation-folder/DC_BlackBox/" />
+        <folder expanded="1" path="animation-folder/DC_HoleBox/" />
+        <folder expanded="1" path="animation-folder/DC_BlackBox2/" />
+        <folder expanded="1" path="animation-folder/DC_BlackBox3/" />
         <folder expanded="1" path="animation-folder/REPLACE_WITH_REAL_TIMER/" />
     </folders-expanded>
 </c2uistate>

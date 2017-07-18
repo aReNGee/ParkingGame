@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>DC_MainGame</name>
-    <sid>860166510144006</sid>
+    <sid>325220203016668</sid>
     <event-sheet>DC_EventSheet</event-sheet>
     <size>
         <width>1920</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="SolidObjects" sid="157464484470031">
+        <layer name="SolidObjects" sid="528328737240830">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DC_WallForPathfinding" uid="39">
+                <instance type="DC_WallForPathfinding" uid="92">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -58,7 +58,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="40">
+                <instance type="DC_WallForPathfinding" uid="93">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -87,7 +87,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="41">
+                <instance type="DC_WallForPathfinding" uid="94">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -116,7 +116,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="42">
+                <instance type="DC_WallForPathfinding" uid="95">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -145,7 +145,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="43">
+                <instance type="DC_WallForPathfinding" uid="96">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -174,7 +174,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="44">
+                <instance type="DC_WallForPathfinding" uid="97">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -203,7 +203,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="45">
+                <instance type="DC_WallForPathfinding" uid="98">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -232,7 +232,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="46">
+                <instance type="DC_WallForPathfinding" uid="99">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -261,7 +261,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="47">
+                <instance type="DC_WallForPathfinding" uid="100">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -290,7 +290,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="48">
+                <instance type="DC_WallForPathfinding" uid="101">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -319,7 +319,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="59">
+                <instance type="DC_WallForPathfinding" uid="102">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -348,7 +348,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_WallForPathfinding" uid="60">
+                <instance type="DC_WallForPathfinding" uid="103">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -377,7 +377,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BlockingCar" uid="64">
+                <instance type="DC_BlockingCar" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -402,7 +402,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="LowerLayer" sid="770250144011925">
+        <layer name="LowerLayer" sid="361468013423902">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -418,7 +418,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DC_ThinkyBubbleBike" uid="62">
+                <instance type="DC_ThinkyBubbleBike" uid="105">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -440,7 +440,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ThinkyBubble" uid="58">
+                <instance type="DC_ThinkyBubble" uid="106">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -462,7 +462,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_Text" uid="2">
+                <instance type="DC_Text" uid="107">
                     <properties>
                         <text>HERE</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -489,7 +489,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_StuffSpawnsHere" uid="6">
+                <instance type="DC_StuffSpawnsHere" uid="108">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -514,7 +514,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_StuffSpawnsHere" uid="8">
+                <instance type="DC_StuffSpawnsHere" uid="109">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -539,7 +539,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_StuffSpawnsHere" uid="11">
+                <instance type="DC_StuffSpawnsHere" uid="110">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -564,7 +564,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_StuffSpawnsHere" uid="13">
+                <instance type="DC_StuffSpawnsHere" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -589,7 +589,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="17">
+                <instance type="DC_ParkingSpace" uid="112">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -616,7 +616,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="18">
+                <instance type="DC_ParkingSpace" uid="113">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -643,7 +643,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="19">
+                <instance type="DC_ParkingSpace" uid="114">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -670,7 +670,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="20">
+                <instance type="DC_ParkingSpace" uid="115">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -697,7 +697,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="21">
+                <instance type="DC_ParkingSpace" uid="116">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -724,7 +724,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="28">
+                <instance type="DC_ParkingSpace" uid="117">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -751,7 +751,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="29">
+                <instance type="DC_ParkingSpace" uid="118">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -778,7 +778,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="30">
+                <instance type="DC_ParkingSpace" uid="119">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -805,7 +805,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="31">
+                <instance type="DC_ParkingSpace" uid="120">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -832,7 +832,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="32">
+                <instance type="DC_ParkingSpace" uid="121">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -859,7 +859,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="33">
+                <instance type="DC_ParkingSpace" uid="122">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -886,7 +886,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_TurningPoint1" uid="34">
+                <instance type="DC_TurningPoint1" uid="123">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -908,7 +908,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_TurningPoint2" uid="35">
+                <instance type="DC_TurningPoint2" uid="124">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -930,7 +930,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_TurningPoint3" uid="36">
+                <instance type="DC_TurningPoint3" uid="125">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -952,7 +952,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_TurningPoint4" uid="37">
+                <instance type="DC_TurningPoint4" uid="126">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -974,7 +974,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="67">
+                <instance type="DC_ParkTrigger" uid="127">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -999,7 +999,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkingSpace" uid="9">
+                <instance type="DC_ParkingSpace" uid="128">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1026,7 +1026,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="68">
+                <instance type="DC_ParkTrigger" uid="129">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1051,7 +1051,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="69">
+                <instance type="DC_ParkTrigger" uid="130">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1076,7 +1076,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="70">
+                <instance type="DC_ParkTrigger" uid="131">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1101,7 +1101,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="71">
+                <instance type="DC_ParkTrigger" uid="132">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1126,7 +1126,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="72">
+                <instance type="DC_ParkTrigger" uid="133">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1151,7 +1151,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="73">
+                <instance type="DC_ParkTrigger" uid="134">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1176,7 +1176,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="74">
+                <instance type="DC_ParkTrigger" uid="135">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1201,7 +1201,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="75">
+                <instance type="DC_ParkTrigger" uid="136">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1226,7 +1226,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="76">
+                <instance type="DC_ParkTrigger" uid="137">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1251,7 +1251,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="77">
+                <instance type="DC_ParkTrigger" uid="138">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1276,7 +1276,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ParkTrigger" uid="78">
+                <instance type="DC_ParkTrigger" uid="139">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1301,7 +1301,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeTrigger" uid="79">
+                <instance type="DC_BikeTrigger" uid="140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1326,7 +1326,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeTrigger" uid="80">
+                <instance type="DC_BikeTrigger" uid="141">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1351,7 +1351,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeTrigger" uid="81">
+                <instance type="DC_BikeTrigger" uid="142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1376,7 +1376,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeTrigger" uid="82">
+                <instance type="DC_BikeTrigger" uid="143">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1401,7 +1401,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeTrigger" uid="83">
+                <instance type="DC_BikeTrigger" uid="144">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1426,7 +1426,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeTrigger" uid="84">
+                <instance type="DC_BikeTrigger" uid="145">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1451,7 +1451,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_Background" uid="0">
+                <instance type="DC_Background" uid="146">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1476,7 +1476,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="MovingObject" sid="339277666419816">
+        <layer name="MovingObject" sid="800267353026065">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1492,7 +1492,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DC_Car" uid="1">
+                <instance type="DC_Car" uid="147">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1533,7 +1533,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_CarCollider" uid="7">
+                <instance type="DC_CarCollider" uid="148">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Animation2</initial-animation>
@@ -1560,7 +1560,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeCollider" uid="10">
+                <instance type="DC_BikeCollider" uid="149">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1587,7 +1587,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ImAPole" uid="12">
+                <instance type="DC_ImAPole" uid="150">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1613,7 +1613,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ImAPole" uid="14">
+                <instance type="DC_ImAPole" uid="151">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1639,7 +1639,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ImAPole" uid="15">
+                <instance type="DC_ImAPole" uid="152">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1665,7 +1665,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ImAPole" uid="25">
+                <instance type="DC_ImAPole" uid="153">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1691,7 +1691,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ImAPole" uid="26">
+                <instance type="DC_ImAPole" uid="154">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1717,7 +1717,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ImAPole" uid="27">
+                <instance type="DC_ImAPole" uid="155">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1743,7 +1743,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_Bike" uid="3">
+                <instance type="DC_Bike" uid="156">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1776,7 +1776,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="JustPassengar" sid="442319079332498">
+        <layer name="JustPassengar" sid="664932961605424">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1792,7 +1792,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DC_Person" uid="4">
+                <instance type="DC_Person" uid="157">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1836,7 +1836,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Cloud(f)layer" sid="586340182897429">
+        <layer name="Cloud(f)layer" sid="395469908096832">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1852,7 +1852,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="REPLACE_WITH_REAL_TIMER" uid="91">
+                <instance type="REPLACE_WITH_REAL_TIMER" uid="158">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1877,7 +1877,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Text" sid="641414382233738">
+        <layer name="Text" sid="563705480095027">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1893,7 +1893,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DC_RealTargets" uid="49">
+                <instance type="DC_RealTargets" uid="159">
                     <properties>
                         <text>1</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1920,7 +1920,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="50">
+                <instance type="DC_RealTargets" uid="160">
                     <properties>
                         <text>2</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1947,7 +1947,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="51">
+                <instance type="DC_RealTargets" uid="161">
                     <properties>
                         <text>3</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1974,7 +1974,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="52">
+                <instance type="DC_RealTargets" uid="162">
                     <properties>
                         <text>4</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2001,7 +2001,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="53">
+                <instance type="DC_RealTargets" uid="163">
                     <properties>
                         <text>5</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2028,7 +2028,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="54">
+                <instance type="DC_RealTargets" uid="164">
                     <properties>
                         <text>6</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2055,7 +2055,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="55">
+                <instance type="DC_RealTargets" uid="165">
                     <properties>
                         <text>7</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2082,7 +2082,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="56">
+                <instance type="DC_RealTargets" uid="166">
                     <properties>
                         <text>8</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2109,7 +2109,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_RealTargets" uid="57">
+                <instance type="DC_RealTargets" uid="167">
                     <properties>
                         <text>9</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2136,7 +2136,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_PassengerTarget" uid="61">
+                <instance type="DC_PassengerTarget" uid="168">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2163,7 +2163,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BikeTarget" uid="63">
+                <instance type="DC_BikeTarget" uid="169">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2190,7 +2190,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ST4R" uid="88">
+                <instance type="DC_ST4R" uid="170">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2215,7 +2215,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ST4R" uid="89">
+                <instance type="DC_ST4R" uid="171">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2240,7 +2240,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ST4R" uid="90">
+                <instance type="DC_ST4R" uid="172">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2265,7 +2265,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_TempScoreThingy" uid="85">
+                <instance type="DC_TempScoreThingy" uid="173">
                     <properties>
                         <text>Emissions: </text>
                         <initial-visibility>Visible</initial-visibility>
@@ -2295,7 +2295,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Endgame" sid="813844832058813">
+        <layer name="Endgame" sid="149542597383225">
             <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -2311,7 +2311,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DC_PaintItBlack" uid="38">
+                <instance type="DC_PaintItBlack" uid="174">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2333,7 +2333,7 @@
                         <opacity>0.75</opacity>
                     </world>
                 </instance>
-                <instance type="DC_EGBG" uid="16">
+                <instance type="DC_EGBG" uid="175">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2355,7 +2355,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ST4R" uid="22">
+                <instance type="DC_ST4R" uid="176">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2380,7 +2380,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ST4R" uid="23">
+                <instance type="DC_ST4R" uid="177">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2405,7 +2405,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_ST4R" uid="24">
+                <instance type="DC_ST4R" uid="178">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2430,7 +2430,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_Exit" uid="86">
+                <instance type="DC_Exit" uid="179">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2452,7 +2452,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DC_Take2" uid="87">
+                <instance type="DC_Take2" uid="180">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

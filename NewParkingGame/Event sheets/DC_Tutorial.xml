@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DC_Tutorial</name>
+    <events>
+        <event-block sid="263466376043304">
+            <conditions>
+                <condition id="14" name="On tap" sid="402848262280345" type="Touch" />
+                <condition id="-8" name="Compare two values" sid="223748664903871" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;DC_Tutorial_1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="285701522188026" type="System">
+                    <param id="0" name="Layout">&quot;DC_Tutorial_2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
