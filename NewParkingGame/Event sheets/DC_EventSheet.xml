@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DC_EventSheet</name>
     <events>
+        <variable comment="Default Value 6" constant="0" name="DC_CarsLeftToSpawn" sid="845113707372006" static="0" type="number">6</variable>
+        <variable comment="Default Value 3" constant="0" name="DC_BikesLeftToSpawn" sid="430506560562796" static="0" type="number">3</variable>
         <variable comment="represents the parking spaces" constant="0" name="DC_EXPERIMENTAL_ARRAY_ACTION" sid="180508569474533" static="0" type="text">EEEEEEEEEEEE</variable>
         <variable constant="1" name="DC_CARCAP" sid="774886392169711" static="0" type="number">10</variable>
         <variable constant="0" name="DC_ThingsOnScreen" sid="533676289867153" static="0" type="number">0</variable>
@@ -27,7 +29,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="414984308519825" type="System">
                             <param id="0" name="Variable">DC_IsItACar</param>
-                            <param id="1" name="Value">choose(&quot;yes&quot;, &quot;no&quot;)</param>
+                            <param id="1" name="Value">choose(&quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;no&quot;, &quot;no&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="275779445932709" type="System">
                             <param id="0" name="Variable">DC_SpawnItHere</param>
@@ -43,6 +45,44 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="946761267237091">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="200709067326501" type="System">
+                                            <param id="0" name="Variable">DC_IsItACar</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;yes&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="518786895447274" type="System">
+                                            <param id="0" name="Variable">DC_CarsLeftToSpawn</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="259453857526707" type="System">
+                                            <param id="0" name="Variable">DC_IsItACar</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="683057200204932">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="533860876908001" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="935797419982792" type="System">
+                                            <param id="0" name="Variable">DC_BikesLeftToSpawn</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="887474334567602" type="System">
+                                            <param id="0" name="Variable">DC_IsItACar</param>
+                                            <param id="1" name="Value">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="670823222907308">
                             <conditions>
@@ -85,6 +125,10 @@
                                 <action id="-26" name="Move to layer" sid="469994792436960" type="DC_ThinkyBubble">
                                     <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
                                 </action>
+                                <action id="-11" name="Subtract from" sid="307278419080532" type="System">
+                                    <param id="0" name="Variable">DC_CarsLeftToSpawn</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="173824933109762">
@@ -123,6 +167,10 @@
                                 </action>
                                 <action id="-26" name="Move to layer" sid="245930235702337" type="DC_ThinkyBubbleBike">
                                     <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="673803910113253" type="System">
+                                    <param id="0" name="Variable">DC_BikesLeftToSpawn</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1749,6 +1797,163 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="makes the stars dissapear on teh on screen view" sid="794484169072344" title="DC_Stars go bye bye">
+            <sub-events>
+                <event-block sid="123474095276809">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="974739311224305" type="System">
+                            <param id="0" name="Variable">DC_Emissions</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="345450625729802" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="531304472872405">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="186102599648497" type="DC_ST4R">
+                                    <param id="0" name="Instance variable">UrLosing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="109101376676650" type="DC_ST4R">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="466453935676895">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="455048037243452" type="System">
+                            <param id="0" name="Variable">DC_Emissions</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="478508966410282" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="109201503955114">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="669035366570044" type="DC_ST4R">
+                                    <param id="0" name="Instance variable">UrLosing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="218505961239812" type="DC_ST4R">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="488759349453583">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="294848763172817" type="System">
+                            <param id="0" name="Variable">DC_Emissions</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="217814857967069" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="832924622487576">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="232567561898145" type="DC_ST4R">
+                                    <param id="0" name="Instance variable">UrLosing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="628135992559629" type="DC_ST4R">
+                                    <param id="0" name="Animation">&quot;Empty&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="982795248656419">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="270507172973080" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="999268206475728" type="REPLACE_WITH_REAL_TIMER">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="551814155379059" type="REPLACE_WITH_REAL_TIMER">
+                    <param id="0" name="Width">REPLACE_WITH_REAL_TIMER.Width - 3.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="173592901121582">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="733095112452171" type="REPLACE_WITH_REAL_TIMER">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="333802526564502" type="System">
+                    <param id="0" name="Layer">6</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="443860213405088">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="916637011906998" type="System">
+                            <param id="0" name="Count">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="687246177268571" type="System">
+                            <param id="0" name="Layer">loopindex</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="184187899965456" title="DC_Endgamestuff">
+            <sub-events>
+                <event-block sid="734224650189226">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="487874178832266" type="Touch">
+                            <param id="0" name="Object">DC_Take2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="770569345432754" type="System">
+                            <param id="0" name="Layout">DC_MainGame</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="718229894951592">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="986423827646103" type="Touch">
+                            <param id="0" name="Object">DC_Exit</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
