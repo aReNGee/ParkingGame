@@ -105,6 +105,10 @@
                             <param id="0" name="Instance variable">TARGET</param>
                             <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
                         </action>
+                        <action id="-10" name="Set value" sid="560530407151592" type="DC_Bike">
+                            <param id="0" name="Instance variable">UClickedOnThis</param>
+                            <param id="1" name="Value">&quot;nope&quot;</param>
+                        </action>
                         <action id="0" name="Set text" sid="761111439531017" type="DC_BikeTarget">
                             <param id="0" name="Text">DC_Bike.TARGET</param>
                         </action>
@@ -115,36 +119,24 @@
                             <param id="0" name="Text">&quot;Bikes also have destinations.&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="981836548640036" type="DC_TapToContinue">
-                            <param id="0" name="Text">&quot;Tap to Continue&quot;</param>
+                            <param id="0" name="Text">&quot;Tap the bike to continue.&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="647669363029114" type="System">
                             <param id="0" name="Variable">DC_TimeInterval</param>
                             <param id="1" name="Value">time</param>
                         </action>
-                        <action id="-10" name="Add to" sid="466224489912482" type="System">
-                            <param id="0" name="Variable">TutorialCounter</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="560530407151592" type="DC_Bike">
-                            <param id="0" name="Instance variable">UClickedOnThis</param>
-                            <param id="1" name="Value">&quot;yup&quot;</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="598995478299263" type="DC_Bike">
-                            <param id="0" name="Animation">&quot;Selected&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="593527827043763" type="System">
-                            <param id="0" name="Variable">DC_CurrentlySelected</param>
-                            <param id="1" name="Value">&quot;Bike&quot;</param>
-                        </action>
                         <action id="-3" name="Create object" sid="858856627849810" type="System">
-                            <param id="0" name="Object to create">LocationIconsBike</param>
+                            <param id="0" name="Object to create">DC_LocationIconsBike</param>
                             <param id="1" name="Layer">&quot;Tutorial&quot;</param>
                             <param id="2" name="X">0</param>
                             <param id="3" name="Y">0</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="446453579794788" type="DC_MapLocationIcons">
                             <param id="0" name="Layer">&quot;Text&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="583132458273947" type="System">
+                            <param id="0" name="Variable">TutorialCounter</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -163,7 +155,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="755838131913272">
+                <event-block disabled="1" sid="755838131913272">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="665814897987087" type="System" />
                         <condition id="-14" name="Compare variable" sid="321723327862477" type="System">
@@ -184,7 +176,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="322359328608593" type="DC_TutorialText">
-                            <param id="0" name="Text">&quot;Bikes have yellow parking spots scattered around the map. Pick the highlighted one and park the bike.&quot;</param>
+                            <param id="0" name="Text">&quot;Bikes have yellow parking spots scattered around the map. Tap a bike pole or bike rack to park the bike.&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="863644321582441" type="DC_TapToContinue">
                             <param id="0" name="Text">&quot;Tap a pole to continue.&quot;</param>
@@ -210,7 +202,7 @@
                         <condition id="-14" name="Compare variable" sid="914889807021139" type="System">
                             <param id="0" name="Variable">TutorialCounter</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
+                            <param id="2" name="Value">5</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="495163251541821" type="System">
                             <param id="0" name="First value">LayoutName</param>
@@ -283,7 +275,7 @@
                                     <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="183050714916412" type="System">
-                                    <param id="0" name="Object to create">LocationIconsThinky</param>
+                                    <param id="0" name="Object to create">DC_LocationIconsThinky</param>
                                     <param id="1" name="Layer">&quot;Text&quot;</param>
                                     <param id="2" name="X">0</param>
                                     <param id="3" name="Y">0</param>
@@ -581,24 +573,24 @@
                                     <param id="0" name="Object">DC_ThinkyBubbleBike</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action id="-26" name="Move to layer" sid="686626196060960" type="LocationIconsThinky">
+                                <action id="-26" name="Move to layer" sid="686626196060960" type="DC_LocationIconsThinky">
                                     <param id="0" name="Layer">&quot;Tutorial&quot;</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="491374474730560" type="LocationIconsThinky">
+                                <action id="-3" name="Set position" sid="491374474730560" type="DC_LocationIconsThinky">
                                     <param id="0" name="X">DC_ThinkyBubble.X</param>
                                     <param id="1" name="Y">DC_ThinkyBubble.Y-15</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="214957606860709" type="LocationIconsThinky">
+                                <action id="5" name="Set frame" sid="214957606860709" type="DC_LocationIconsThinky">
                                     <param id="0" name="Frame number">int(DC_PassengerTarget.Text)-1</param>
                                 </action>
-                                <action id="-26" name="Move to layer" sid="413972402532132" type="LocationIconsBike">
+                                <action id="-26" name="Move to layer" sid="413972402532132" type="DC_LocationIconsBike">
                                     <param id="0" name="Layer">&quot;Tutorial&quot;</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="448715513239816" type="LocationIconsBike">
+                                <action id="-3" name="Set position" sid="448715513239816" type="DC_LocationIconsBike">
                                     <param id="0" name="X">DC_ThinkyBubbleBike.X</param>
                                     <param id="1" name="Y">DC_ThinkyBubbleBike.Y-15</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="790560126860558" type="LocationIconsBike">
+                                <action id="5" name="Set frame" sid="790560126860558" type="DC_LocationIconsBike">
                                     <param id="0" name="Frame number">int(DC_BikeTarget.Text)-1</param>
                                 </action>
                             </actions>
@@ -626,6 +618,11 @@
                                             <param id="0" name="Instance variable">IAM</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">DC_ParkTrigger.IAMTOO</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="926379530296668" type="System">
+                                            <param id="0" name="First value">time</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">DC_TimeInterval+1.8</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -660,7 +657,7 @@
                                         <action id="-15" name="Set visible" sid="632082767661491" type="DC_PassengerTarget">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="809112156779943" type="LocationIconsThinky">
+                                        <action id="-15" name="Set visible" sid="809112156779943" type="DC_LocationIconsThinky">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-11" name="Subtract from" sid="614987505916864" type="System">
@@ -690,7 +687,7 @@
                                             <param id="1" name="Parameter {n}">DC_ParkingSpace.IAM</param>
                                         </action>
                                         <action id="0" name="Set text" sid="837367220167714" type="DC_TutorialText">
-                                            <param id="0" name="Text">&quot;After parking, people will travel the rest of the road on foot.&quot;</param>
+                                            <param id="0" name="Text">&quot;After parking, people will travel their destination on foot.&quot;</param>
                                         </action>
                                         <action id="0" name="Set text" sid="628615572071847" type="DC_TapToContinue">
                                             <param id="0" name="Text">&quot;Tap to Continue&quot;</param>
@@ -760,7 +757,7 @@
                                         <action id="-15" name="Set visible" sid="771411243874487" type="DC_BikeTarget">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="576955315580474" type="LocationIconsBike">
+                                        <action id="-15" name="Set visible" sid="576955315580474" type="DC_LocationIconsBike">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="0" name="Play" sid="432010276466871" type="Audio">
@@ -782,10 +779,10 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="0" name="Set text" sid="178755369418779" type="DC_TutorialText">
-                                            <param id="0" name="Text">&quot;Try to park vehicles as quickly as possible.&quot;</param>
+                                            <param id="0" name="Text">&quot;Park vehicles quickly to reduce emissions. Vehilces will wait to avoid hitting pedestrians. Good luck!&quot;</param>
                                         </action>
                                         <action id="0" name="Set text" sid="500413088999629" type="DC_TapToContinue">
-                                            <param id="0" name="Text">&quot;Tap anywhere to begin!&quot;</param>
+                                            <param id="0" name="Text">&quot;Tap anywhere to begin the game!&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -937,6 +934,16 @@
                                                             <param id="0" name="Animation">&quot;Tracking&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
+                                                        <action id="0" name="Set text" sid="212713045898092" type="DC_TutorialText">
+                                                            <param id="0" name="Text">&quot;Once you&apos;ve selected a parking space, the car will drive until it reaches the selected parking spot.&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="953764447422160" type="DC_TapToContinue">
+                                                            <param id="0" name="Text">&quot;Tap to continue.&quot;</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="949800447533188" type="System">
+                                                            <param id="0" name="Variable">DC_TimeInterval</param>
+                                                            <param id="1" name="Value">time</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -972,6 +979,12 @@
                                 <action id="-9" name="Set value" sid="590979970334545" type="System">
                                     <param id="0" name="Variable">DC_CurrentlySelected</param>
                                     <param id="1" name="Value">&quot;Car&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="788460645037087" type="Audio">
+                                    <param id="0" name="Audio file">sfx_lightswitch</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;selection sound&quot;</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1026,6 +1039,12 @@
                                 <action id="-9" name="Set value" sid="737810783939756" type="System">
                                     <param id="0" name="Variable">DC_CurrentlySelected</param>
                                     <param id="1" name="Value">&quot;Bike&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="622740400920399" type="Audio">
+                                    <param id="0" name="Audio file">sfx_lightswitch</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;selection sound&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1096,6 +1115,43 @@
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="694298857074355">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="635207791172645" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="436347238677288" type="System">
+                                                            <param id="0" name="Variable">TutorialCounter</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="606064119634703" type="System">
+                                                            <param id="0" name="Variable">TutorialCounter</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="454535853055065" type="DC_TutorialText">
+                                                            <param id="0" name="Text">&quot;Bikes have yellow parking spots scattered around the map. Tap a bike pole or bike rack to park the bike.&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="196744520655357" type="DC_TapToContinue">
+                                                            <param id="0" name="Text">&quot;Park the bike to continue.&quot;</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="959377767736790" type="System">
+                                                            <param id="0" name="Variable">DC_TimeInterval</param>
+                                                            <param id="1" name="Value">time</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="325635750802857" type="DC_BlackBox">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="322659712653238" type="DC_BlackBox4">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                        <action id="-15" name="Set visible" sid="147659984477267" type="DC_BlackBox2">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1162,7 +1218,11 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="656944434298833" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-15" name="Set visible" sid="819841328792399" type="DC_RealTargets">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

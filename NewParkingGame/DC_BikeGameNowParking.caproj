@@ -250,7 +250,7 @@
                     <type>DC_CarCollider</type>
                     <type>DC_ThinkyBubble</type>
                     <type>DC_PassengerTarget</type>
-                    <type>LocationIconsThinky</type>
+                    <type>DC_LocationIconsThinky</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="395792726456731" speed="5">
@@ -321,7 +321,7 @@
                     <type>DC_CarCollider</type>
                     <type>DC_ThinkyBubble</type>
                     <type>DC_PassengerTarget</type>
-                    <type>LocationIconsThinky</type>
+                    <type>DC_LocationIconsThinky</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="846457033826044" speed="5">
@@ -364,7 +364,7 @@
                     <type>DC_CarCollider</type>
                     <type>DC_ThinkyBubble</type>
                     <type>DC_PassengerTarget</type>
-                    <type>LocationIconsThinky</type>
+                    <type>DC_LocationIconsThinky</type>
                 </container>
             </object-type>
         </object-folder>
@@ -456,7 +456,7 @@
                     <type>DC_CarCollider</type>
                     <type>DC_ThinkyBubble</type>
                     <type>DC_PassengerTarget</type>
-                    <type>LocationIconsThinky</type>
+                    <type>DC_LocationIconsThinky</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="612621623142306" speed="5">
@@ -548,14 +548,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="LocationIconsThinky" sid="961527859570144">
+            <object-type name="DC_LocationIconsThinky" sid="961527859570144">
                 <plugin id="Sprite" />
                 <container>
                     <type>DC_Car</type>
                     <type>DC_CarCollider</type>
                     <type>DC_ThinkyBubble</type>
                     <type>DC_PassengerTarget</type>
-                    <type>LocationIconsThinky</type>
+                    <type>DC_LocationIconsThinky</type>
                 </container>
                 <animation-folder>
                     <animation framecount="9" loop="0" name="Animation1" pingpong="0" repeatcount="1" repeatto="0" sid="451654620648280" speed="5">
@@ -691,7 +691,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="LocationIconsBike" sid="280392469961671">
+            <object-type name="DC_LocationIconsBike" sid="280392469961671">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="9" loop="0" name="Animation1" pingpong="0" repeatcount="1" repeatto="0" sid="573082739730284" speed="5">
@@ -1251,6 +1251,8 @@
         <file name="sfx_citytraffit.ogg" />
         <file name="sfx_placingcar.m4a" />
         <file name="sfx_placingcar.ogg" />
+        <file name="sfx_lightswitch.m4a" />
+        <file name="sfx_lightswitch.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

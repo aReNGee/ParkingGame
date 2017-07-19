@@ -2292,7 +2292,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LocationIconsThinky" uid="310">
+                <instance type="DC_LocationIconsThinky" uid="310">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2314,7 +2314,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LocationIconsBike" uid="311">
+                <instance type="DC_LocationIconsBike" uid="311">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2910,7 +2910,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2</x>
-                        <y>62</y>
+                        <y>8</y>
                         <z>0</z>
                         <width>1836</width>
                         <height>160</height>

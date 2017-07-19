@@ -184,7 +184,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="378216653485548" type="System">
-                                    <param id="0" name="Object to create">LocationIconsBike</param>
+                                    <param id="0" name="Object to create">DC_LocationIconsBike</param>
                                     <param id="1" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
                                     <param id="2" name="X">0</param>
                                     <param id="3" name="Y">0</param>
@@ -386,6 +386,12 @@
                                     <param id="0" name="Variable">DC_CurrentlySelected</param>
                                     <param id="1" name="Value">&quot;Car&quot;</param>
                                 </action>
+                                <action id="0" name="Play" sid="934884753512272" type="Audio">
+                                    <param id="0" name="Audio file">sfx_lightswitch</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;selection sound&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="633905998265466">
@@ -412,6 +418,12 @@
                                 <action id="-9" name="Set value" sid="602889201803038" type="System">
                                     <param id="0" name="Variable">DC_CurrentlySelected</param>
                                     <param id="1" name="Value">&quot;Bike&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="771456673425510" type="Audio">
+                                    <param id="0" name="Audio file">sfx_lightswitch</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;selection sound&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -873,24 +885,24 @@
                             <param id="0" name="Object">DC_ThinkyBubbleBike</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="771465956149050" type="LocationIconsThinky">
+                        <action id="-26" name="Move to layer" sid="771465956149050" type="DC_LocationIconsThinky">
                             <param id="0" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="608093932527770" type="LocationIconsThinky">
+                        <action id="-3" name="Set position" sid="608093932527770" type="DC_LocationIconsThinky">
                             <param id="0" name="X">DC_ThinkyBubble.X</param>
                             <param id="1" name="Y">DC_ThinkyBubble.Y-15</param>
                         </action>
-                        <action id="5" name="Set frame" sid="705163107004304" type="LocationIconsThinky">
+                        <action id="5" name="Set frame" sid="705163107004304" type="DC_LocationIconsThinky">
                             <param id="0" name="Frame number">int(DC_PassengerTarget.Text)-1</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="527034145854304" type="LocationIconsBike">
+                        <action id="-26" name="Move to layer" sid="527034145854304" type="DC_LocationIconsBike">
                             <param id="0" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
                         </action>
-                        <action id="-3" name="Set position" sid="646874967112943" type="LocationIconsBike">
+                        <action id="-3" name="Set position" sid="646874967112943" type="DC_LocationIconsBike">
                             <param id="0" name="X">DC_ThinkyBubbleBike.X</param>
                             <param id="1" name="Y">DC_ThinkyBubbleBike.Y-15</param>
                         </action>
-                        <action id="5" name="Set frame" sid="455893365400604" type="LocationIconsBike">
+                        <action id="5" name="Set frame" sid="455893365400604" type="DC_LocationIconsBike">
                             <param id="0" name="Frame number">int(DC_BikeTarget.Text)-1</param>
                         </action>
                     </actions>
@@ -1693,7 +1705,7 @@
                                 <action id="-15" name="Set visible" sid="296868318984357" type="DC_PassengerTarget">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="666366471467036" type="LocationIconsThinky">
+                                <action id="-15" name="Set visible" sid="666366471467036" type="DC_LocationIconsThinky">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-11" name="Subtract from" sid="141166013095430" type="System">
@@ -1783,7 +1795,7 @@
                                 <action id="-15" name="Set visible" sid="153393382845684" type="DC_BikeTarget">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="950953226545358" type="LocationIconsBike">
+                                <action id="-15" name="Set visible" sid="950953226545358" type="DC_LocationIconsBike">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="0" name="Play" sid="782492925501597" type="Audio">
