@@ -123,7 +123,7 @@
                                 <action id="-26" name="Move to layer" sid="716521261820009" type="DC_PassengerTarget">
                                     <param id="0" name="Layer">&quot;Text&quot;</param>
                                 </action>
-                                <action id="0" name="Play" sid="131287079592213" type="Audio">
+                                <action disabled="1" id="0" name="Play" sid="131287079592213" type="Audio">
                                     <param id="0" name="Audio file">sfx_carhorn</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
@@ -166,7 +166,7 @@
                                 <action id="-26" name="Move to layer" sid="166434846598689" type="DC_BikeTarget">
                                     <param id="0" name="Layer">&quot;Text&quot;</param>
                                 </action>
-                                <action id="0" name="Play" sid="398306313110511" type="Audio">
+                                <action disabled="1" id="0" name="Play" sid="398306313110511" type="Audio">
                                     <param id="0" name="Audio file">sfx_bikebell</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
@@ -248,6 +248,12 @@
                                                                     <param id="0" name="Animation">&quot;Going&quot;</param>
                                                                     <param id="1" name="From">1</param>
                                                                 </action>
+                                                                <action id="0" name="Play" sid="615737709356940" type="Audio">
+                                                                    <param id="0" name="Audio file">sfx_bikebell</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -327,6 +333,12 @@
                                                             <param id="0" name="Animation">&quot;Tracking&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
+                                                        <action id="0" name="Play" sid="123929784303686" type="Audio">
+                                                            <param id="0" name="Audio file">sfx_carhorn</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
@@ -341,7 +353,8 @@
                     <sub-events>
                         <event-block sid="919937778955173">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="808622194694589" type="Touch">
+                                <condition id="0" name="On any touch start" sid="990394974930866" type="Touch" />
+                                <condition id="4" name="Is touching object" sid="261309156951220" type="Touch">
                                     <param id="0" name="Object">DC_Car</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="903281115902513" type="DC_Car">
@@ -367,13 +380,14 @@
                         </event-block>
                         <event-block sid="633905998265466">
                             <conditions>
-                                <condition id="17" name="On tap object" sid="248649581900935" type="Touch">
-                                    <param id="0" name="Object">DC_Bike</param>
-                                </condition>
+                                <condition id="0" name="On any touch start" sid="909179204527685" type="Touch" />
                                 <condition id="-7" name="Compare instance variable" sid="712436962724849" type="DC_Bike">
                                     <param id="0" name="Instance variable">UClickedOnThis</param>
                                     <param id="1" name="Comparison">1</param>
                                     <param id="2" name="Value">&quot;cant&quot;</param>
+                                </condition>
+                                <condition id="4" name="Is touching object" sid="154566096914825" type="Touch">
+                                    <param id="0" name="Object">DC_Bike</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1947,6 +1961,7 @@
         <event-group description="" sid="184187899965456" title="DC_Endgamestuff">
             <sub-events>
                 <variable constant="0" name="TempDiff" sid="756444498671257" static="0" type="number">0</variable>
+                <variable constant="0" name="TempTime" sid="968867535081772" static="0" type="number">0</variable>
                 <event-block sid="734224650189226">
                     <conditions>
                         <condition id="17" name="On tap object" sid="487874178832266" type="Touch">
@@ -1962,10 +1977,18 @@
                             <param id="0" name="Variable">TempDiff</param>
                             <param id="1" name="Value">DC_OfficialDifficulty</param>
                         </action>
+                        <action id="-9" name="Set value" sid="891702495605241" type="System">
+                            <param id="0" name="Variable">TempTime</param>
+                            <param id="1" name="Value">DC_TimeInterval</param>
+                        </action>
                         <action id="-21" name="Reset global variables" sid="866537570489578" type="System" />
                         <action id="-9" name="Set value" sid="194866670664048" type="System">
                             <param id="0" name="Variable">DC_OfficialDifficulty</param>
                             <param id="1" name="Value">TempDiff</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="912347021279451" type="System">
+                            <param id="0" name="Variable">DC_TimeInterval</param>
+                            <param id="1" name="Value">TempTime</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="140872973352842" type="System">
                             <param id="0" name="Layer">6</param>
