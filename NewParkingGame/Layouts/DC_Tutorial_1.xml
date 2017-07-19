@@ -1896,7 +1896,7 @@
                 <instance type="DC_RealTargets" uid="49">
                     <properties>
                         <text>1</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -1905,18 +1905,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1935,7 +1923,7 @@
                 <instance type="DC_RealTargets" uid="50">
                     <properties>
                         <text>2</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -1944,18 +1932,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1974,7 +1950,7 @@
                 <instance type="DC_RealTargets" uid="51">
                     <properties>
                         <text>3</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -1983,18 +1959,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2013,7 +1977,7 @@
                 <instance type="DC_RealTargets" uid="52">
                     <properties>
                         <text>4</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -2022,18 +1986,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2052,7 +2004,7 @@
                 <instance type="DC_RealTargets" uid="53">
                     <properties>
                         <text>5</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -2061,18 +2013,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2091,7 +2031,7 @@
                 <instance type="DC_RealTargets" uid="54">
                     <properties>
                         <text>6</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -2100,18 +2040,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2130,7 +2058,7 @@
                 <instance type="DC_RealTargets" uid="55">
                     <properties>
                         <text>7</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -2139,18 +2067,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2169,7 +2085,7 @@
                 <instance type="DC_RealTargets" uid="56">
                     <properties>
                         <text>8</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -2178,18 +2094,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2208,7 +2112,7 @@
                 <instance type="DC_RealTargets" uid="57">
                     <properties>
                         <text>9</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Calibri Light,-96,300,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
@@ -2217,18 +2121,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="Warp">
-                            <parameters>
-                                <x-amplitude>5</x-amplitude>
-                                <x-frequency>25</x-frequency>
-                                <x-speed>5</x-speed>
-                                <y-amplitude>5</y-amplitude>
-                                <y-frequency>25</y-frequency>
-                                <y-speed>5</y-speed>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2247,7 +2139,7 @@
                 <instance type="DC_PassengerTarget" uid="61">
                     <properties>
                         <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>

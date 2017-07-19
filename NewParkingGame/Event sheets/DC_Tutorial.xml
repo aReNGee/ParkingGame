@@ -108,9 +108,6 @@
                         <action id="0" name="Set text" sid="761111439531017" type="DC_BikeTarget">
                             <param id="0" name="Text">DC_Bike.TARGET</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="120599413811171" type="DC_BikeTarget">
-                            <param id="0" name="Layer">&quot;Text&quot;</param>
-                        </action>
                         <action id="-26" name="Move to layer" sid="209872575868914" type="DC_ThinkyBubbleBike">
                             <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
                         </action>
@@ -140,7 +137,31 @@
                             <param id="0" name="Variable">DC_CurrentlySelected</param>
                             <param id="1" name="Value">&quot;Bike&quot;</param>
                         </action>
+                        <action id="-3" name="Create object" sid="858856627849810" type="System">
+                            <param id="0" name="Object to create">LocationIconsBike</param>
+                            <param id="1" name="Layer">&quot;Tutorial&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="446453579794788" type="DC_MapLocationIcons">
+                            <param id="0" name="Layer">&quot;Text&quot;</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="264098956417563">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="474216096585414" type="DC_MapLocationIcons">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">DC_Bike.TARGET-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="416141075247940" type="DC_MapLocationIcons">
+                                    <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="755838131913272">
                     <conditions>
@@ -260,6 +281,12 @@
                                 </action>
                                 <action id="-26" name="Move to layer" sid="831561532055993" type="DC_ThinkyBubble">
                                     <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="183050714916412" type="System">
+                                    <param id="0" name="Object to create">LocationIconsThinky</param>
+                                    <param id="1" name="Layer">&quot;Text&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -533,26 +560,46 @@
                 </event-group>
                 <event-group description="" sid="876238847049885" title="DC_ThinkyBubble2">
                     <sub-events>
-                        <event-block sid="826377704052271">
+                        <event-block sid="693030024870531">
                             <conditions>
-                                <condition id="-1" name="Every tick" sid="957397703893772" type="System" />
+                                <condition id="-1" name="Every tick" sid="262025089643683" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="678775103049252" type="DC_ThinkyBubble">
+                                <action id="-3" name="Set position" sid="769735917538653" type="DC_ThinkyBubble">
                                     <param id="0" name="X">DC_Car.X</param>
                                     <param id="1" name="Y">DC_Car.Y-DC_ThinkyBubble.Height</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="225131625726658" type="DC_PassengerTarget">
+                                <action id="-4" name="Set position to another object" sid="758807436214222" type="DC_PassengerTarget">
                                     <param id="0" name="Object">DC_ThinkyBubble</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="200640716524862" type="DC_ThinkyBubbleBike">
+                                <action id="-3" name="Set position" sid="859736800246837" type="DC_ThinkyBubbleBike">
                                     <param id="0" name="X">DC_Bike.X</param>
                                     <param id="1" name="Y">DC_Bike.Y-DC_ThinkyBubbleBike.Height</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="204256839844662" type="DC_BikeTarget">
+                                <action id="-4" name="Set position to another object" sid="672137245554581" type="DC_BikeTarget">
                                     <param id="0" name="Object">DC_ThinkyBubbleBike</param>
                                     <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="686626196060960" type="LocationIconsThinky">
+                                    <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="491374474730560" type="LocationIconsThinky">
+                                    <param id="0" name="X">DC_ThinkyBubble.X</param>
+                                    <param id="1" name="Y">DC_ThinkyBubble.Y-15</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="214957606860709" type="LocationIconsThinky">
+                                    <param id="0" name="Frame number">int(DC_PassengerTarget.Text)-1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="413972402532132" type="LocationIconsBike">
+                                    <param id="0" name="Layer">&quot;Tutorial&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="448715513239816" type="LocationIconsBike">
+                                    <param id="0" name="X">DC_ThinkyBubbleBike.X</param>
+                                    <param id="1" name="Y">DC_ThinkyBubbleBike.Y-15</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="790560126860558" type="LocationIconsBike">
+                                    <param id="0" name="Frame number">int(DC_BikeTarget.Text)-1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -611,6 +658,9 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="632082767661491" type="DC_PassengerTarget">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="809112156779943" type="LocationIconsThinky">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-11" name="Subtract from" sid="614987505916864" type="System">
@@ -708,6 +758,9 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="771411243874487" type="DC_BikeTarget">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="576955315580474" type="LocationIconsBike">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="0" name="Play" sid="432010276466871" type="Audio">
@@ -924,24 +977,14 @@
                             <sub-events>
                                 <event-block sid="658804642393148">
                                     <conditions>
-                                        <condition disabled="1" id="-11" name="For Each" sid="830773597352387" type="System">
-                                            <param id="0" name="Object">DC_RealTargets</param>
-                                        </condition>
-                                        <condition id="0" name="Compare text" sid="552974871452718" type="DC_RealTargets">
-                                            <param id="0" name="Text to compare">str(DC_Car.TARGET)</param>
-                                            <param id="1" name="Case sensitivity">1</param>
+                                        <condition id="3" name="Compare frame" sid="211916586955466" type="DC_MapLocationIcons">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">DC_Car.TARGET-1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set font color" sid="334704329523059" type="DC_RealTargets">
-                                            <param id="0" name="Color">rgb(255,0,0)</param>
-                                        </action>
-                                        <action id="-26" name="Move to layer" sid="788048128641487" type="DC_RealTargets">
+                                        <action id="-26" name="Move to layer" sid="621638945351808" type="DC_MapLocationIcons">
                                             <param id="0" name="Layer">&quot;Tutorial&quot;</param>
-                                        </action>
-                                        <action id="-27" name="Set effect enabled" sid="638392666314654" type="DC_RealTargets">
-                                            <param id="0" name="Mode">1</param>
-                                            <param id="1" name="Effect">&quot;Warp&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1119,12 +1162,7 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="656944434298833" type="System" />
             </conditions>
-            <actions>
-                <action id="-27" name="Set effect enabled" sid="402619275437572" type="DC_RealTargets">
-                    <param id="0" name="Mode">0</param>
-                    <param id="1" name="Effect">&quot;Warp&quot;</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

@@ -136,6 +136,12 @@
                                     <param id="0" name="Variable">DC_CarsLeftToSpawn</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-3" name="Create object" sid="283545609901491" type="System">
+                                    <param id="0" name="Object to create">LocationIconsThinky</param>
+                                    <param id="1" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="173824933109762">
@@ -163,7 +169,7 @@
                                 <action id="0" name="Set text" sid="749629257371663" type="DC_BikeTarget">
                                     <param id="0" name="Text">DC_Bike.TARGET</param>
                                 </action>
-                                <action id="-26" name="Move to layer" sid="166434846598689" type="DC_BikeTarget">
+                                <action disabled="1" id="-26" name="Move to layer" sid="166434846598689" type="DC_BikeTarget">
                                     <param id="0" name="Layer">&quot;Text&quot;</param>
                                 </action>
                                 <action disabled="1" id="0" name="Play" sid="398306313110511" type="Audio">
@@ -178,6 +184,12 @@
                                 <action id="-11" name="Subtract from" sid="673803910113253" type="System">
                                     <param id="0" name="Variable">DC_BikesLeftToSpawn</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="378216653485548" type="System">
+                                    <param id="0" name="Object to create">LocationIconsBike</param>
+                                    <param id="1" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -862,6 +874,26 @@
                         <action id="-4" name="Set position to another object" sid="782454423586014" type="DC_BikeTarget">
                             <param id="0" name="Object">DC_ThinkyBubbleBike</param>
                             <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="771465956149050" type="LocationIconsThinky">
+                            <param id="0" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="608093932527770" type="LocationIconsThinky">
+                            <param id="0" name="X">DC_ThinkyBubble.X</param>
+                            <param id="1" name="Y">DC_ThinkyBubble.Y-15</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="705163107004304" type="LocationIconsThinky">
+                            <param id="0" name="Frame number">int(DC_PassengerTarget.Text)-1</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="527034145854304" type="LocationIconsBike">
+                            <param id="0" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="646874967112943" type="LocationIconsBike">
+                            <param id="0" name="X">DC_ThinkyBubbleBike.X</param>
+                            <param id="1" name="Y">DC_ThinkyBubbleBike.Y-15</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="455893365400604" type="LocationIconsBike">
+                            <param id="0" name="Frame number">int(DC_BikeTarget.Text)-1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1558,10 +1590,6 @@
                         <action id="0" name="Set text" sid="367851227486036" type="DC_TempScoreThingy">
                             <param id="0" name="Text">&quot;Timer: &quot; &amp; DC_TempTimer &amp; &quot; Emissions: &quot; &amp; DC_Emissions</param>
                         </action>
-                        <action id="-27" name="Set effect enabled" sid="278094698652822" type="DC_RealTargets">
-                            <param id="0" name="Mode">0</param>
-                            <param id="1" name="Effect">&quot;Warp&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="944398035823611">
@@ -1667,6 +1695,9 @@
                                 <action id="-15" name="Set visible" sid="296868318984357" type="DC_PassengerTarget">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="666366471467036" type="LocationIconsThinky">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                                 <action id="-11" name="Subtract from" sid="141166013095430" type="System">
                                     <param id="0" name="Variable">DC_EmptyParkingSpaces</param>
                                     <param id="1" name="Value">1</param>
@@ -1754,6 +1785,9 @@
                                 <action id="-15" name="Set visible" sid="153393382845684" type="DC_BikeTarget">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="950953226545358" type="LocationIconsBike">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                                 <action id="0" name="Play" sid="782492925501597" type="Audio">
                                     <param id="0" name="Audio file">sfx_placingcar</param>
                                     <param id="2" name="Loop">0</param>
@@ -1818,6 +1852,12 @@
                                 <action id="-10" name="Add to" sid="278260254642498" type="System">
                                     <param id="0" name="Variable">DC_ThingsOnScreen</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="111703788682776" type="System">
+                                    <param id="0" name="Object to create">LocationIconsThinky</param>
+                                    <param id="1" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1938,7 +1978,7 @@
             </conditions>
             <actions>
                 <action id="-4" name="Set layer visible" sid="333802526564502" type="System">
-                    <param id="0" name="Layer">6</param>
+                    <param id="0" name="Layer">7</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
             </actions>
@@ -1946,7 +1986,7 @@
                 <event-block sid="443860213405088">
                     <conditions>
                         <condition id="-12" name="Repeat" sid="916637011906998" type="System">
-                            <param id="0" name="Count">6</param>
+                            <param id="0" name="Count">7</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1991,7 +2031,7 @@
                             <param id="1" name="Value">TempTime</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="140872973352842" type="System">
-                            <param id="0" name="Layer">6</param>
+                            <param id="0" name="Layer">7</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -1999,7 +2039,7 @@
                         <event-block sid="173890304233495">
                             <conditions>
                                 <condition id="-12" name="Repeat" sid="934815234125998" type="System">
-                                    <param id="0" name="Count">6</param>
+                                    <param id="0" name="Count">7</param>
                                 </condition>
                             </conditions>
                             <actions>
