@@ -7,7 +7,7 @@
         <variable constant="0" name="TutorialCounter" sid="377883718905000" static="0" type="number">0</variable>
         <event-block sid="263466376043304">
             <conditions>
-                <condition id="14" name="On tap" sid="402848262280345" type="Touch" />
+                <condition id="0" name="On any touch start" sid="983975175191495" type="Touch" />
                 <condition id="-8" name="Compare two values" sid="223748664903871" type="System">
                     <param id="0" name="First value">LayoutName</param>
                     <param id="1" name="Comparison">0</param>
@@ -22,67 +22,201 @@
         </event-block>
         <event-block sid="912047015216779">
             <conditions>
-                <condition id="14" name="On tap" sid="705385927307717" type="Touch" />
-                <condition id="-14" name="Compare variable" sid="575879404943939" type="System">
-                    <param id="0" name="Variable">TutorialCounter</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="814229638679895" type="System">
-                    <param id="0" name="First value">LayoutName</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;DC_Tutorial_2&quot;</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="669402082722467" type="System">
-                    <param id="0" name="First value">time</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">DC_TimeInterval+2</param>
-                </condition>
+                <condition id="0" name="On any touch start" sid="705385927307717" type="Touch" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="847870062838085" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="847870062838085" type="System">
                     <param id="0" name="Variable">DC_TimeInterval</param>
                     <param id="1" name="Value">time</param>
                 </action>
-                <action id="-9" name="Set value" sid="939665062636811" type="System">
+                <action disabled="1" id="-9" name="Set value" sid="939665062636811" type="System">
                     <param id="0" name="Variable">DC_OfficialDifficulty</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-25" name="Go to layout (by name)" sid="938073826770440" type="System">
+                <action disabled="1" id="-25" name="Go to layout (by name)" sid="938073826770440" type="System">
                     <param id="0" name="Layout">&quot;DC_MainGame&quot;</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="806960521836416">
-            <conditions>
-                <condition id="14" name="On tap" sid="414412029905421" type="Touch" />
-                <condition id="-8" name="Compare two values" sid="164082506373484" type="System">
-                    <param id="0" name="First value">LayoutName</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;DC_Tutorial_2&quot;</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="518247331348900" type="System">
-                    <param id="0" name="Variable">TutorialCounter</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="972850757979799" type="DC_TutorialText">
-                    <param id="0" name="Text">&quot;The longer a car is on the road, the more emissions it creates.&quot;</param>
-                </action>
-                <action id="0" name="Set text" sid="189191188655626" type="DC_TapToContinue">
-                    <param id="0" name="Text">&quot;Tap to Begin&quot;</param>
-                </action>
-                <action id="-9" name="Set value" sid="977208861770753" type="System">
-                    <param id="0" name="Variable">DC_TimeInterval</param>
-                    <param id="1" name="Value">time</param>
-                </action>
-                <action id="-10" name="Add to" sid="149337764558903" type="System">
-                    <param id="0" name="Variable">TutorialCounter</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
+            <sub-events>
+                <event-block sid="806960521836416">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="164082506373484" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;DC_Tutorial_2&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="518247331348900" type="System">
+                            <param id="0" name="Variable">TutorialCounter</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="972850757979799" type="DC_TutorialText">
+                            <param id="0" name="Text">&quot;The longer a car is on the road, the more emissions it creates.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="189191188655626" type="DC_TapToContinue">
+                            <param id="0" name="Text">&quot;Tap to Continue&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="977208861770753" type="System">
+                            <param id="0" name="Variable">DC_TimeInterval</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="149337764558903" type="System">
+                            <param id="0" name="Variable">TutorialCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948513791864273">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="511581098860188" type="System" />
+                        <condition id="-14" name="Compare variable" sid="575879404943939" type="System">
+                            <param id="0" name="Variable">TutorialCounter</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="814229638679895" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;DC_Tutorial_2&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="669402082722467" type="System">
+                            <param id="0" name="First value">time</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">DC_TimeInterval+2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="383185562107188" type="System">
+                            <param id="0" name="Object to create">DC_Bike</param>
+                            <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                            <param id="2" name="X">DC_StuffSpawnsHere(0).X</param>
+                            <param id="3" name="Y">DC_StuffSpawnsHere(0).Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="590452626243491" type="DC_Bike">
+                            <param id="0" name="Instance variable">ISpawnedAt</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="110323572357177" type="DC_Bike">
+                            <param id="0" name="Angle">DC_StuffSpawnsHere(0).SetRotationTo</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="504872338806578" type="DC_Bike">
+                            <param id="0" name="Instance variable">TARGET</param>
+                            <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="761111439531017" type="DC_BikeTarget">
+                            <param id="0" name="Text">DC_Bike.TARGET</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="120599413811171" type="DC_BikeTarget">
+                            <param id="0" name="Layer">&quot;Text&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="209872575868914" type="DC_ThinkyBubbleBike">
+                            <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="960983174373553" type="DC_TutorialText">
+                            <param id="0" name="Text">&quot;Bikes also have destinations.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="981836548640036" type="DC_TapToContinue">
+                            <param id="0" name="Text">&quot;Tap to Continue&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="647669363029114" type="System">
+                            <param id="0" name="Variable">DC_TimeInterval</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="466224489912482" type="System">
+                            <param id="0" name="Variable">TutorialCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="560530407151592" type="DC_Bike">
+                            <param id="0" name="Instance variable">UClickedOnThis</param>
+                            <param id="1" name="Value">&quot;yup&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="598995478299263" type="DC_Bike">
+                            <param id="0" name="Animation">&quot;Selected&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="593527827043763" type="System">
+                            <param id="0" name="Variable">DC_CurrentlySelected</param>
+                            <param id="1" name="Value">&quot;Bike&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="755838131913272">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="665814897987087" type="System" />
+                        <condition id="-14" name="Compare variable" sid="321723327862477" type="System">
+                            <param id="0" name="Variable">TutorialCounter</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="814437147408451" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;DC_Tutorial_2&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="365777419483515" type="System">
+                            <param id="0" name="First value">time</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">DC_TimeInterval+2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="322359328608593" type="DC_TutorialText">
+                            <param id="0" name="Text">&quot;Bikes have yellow parking spots scattered around the map. Pick the highlighted one and park the bike.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="863644321582441" type="DC_TapToContinue">
+                            <param id="0" name="Text">&quot;Tap a pole to continue.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="899455561431579" type="System">
+                            <param id="0" name="Variable">DC_TimeInterval</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="443994076669856" type="DC_BlackBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="591540056378947" type="DC_BlackBox4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="467985412572184" type="DC_BlackBox2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="802618436240406">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="128095403805554" type="System" />
+                        <condition id="-14" name="Compare variable" sid="914889807021139" type="System">
+                            <param id="0" name="Variable">TutorialCounter</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="495163251541821" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;DC_Tutorial_2&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="337697605384358" type="System">
+                            <param id="0" name="First value">time</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">DC_TimeInterval+2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="882673298971898" type="System">
+                            <param id="0" name="Variable">DC_TimeInterval</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="549080521420908" type="System">
+                            <param id="0" name="Variable">DC_OfficialDifficulty</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="458551698607186" type="System">
+                            <param id="0" name="Layout">&quot;DC_MainGame&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="842952204462382" title="DC_Spawn1Car">
             <sub-events>
@@ -589,6 +723,16 @@
                                         <action id="-10" name="Set value" sid="693440734783099" type="DC_Bike">
                                             <param id="0" name="Instance variable">ImGoingTo</param>
                                             <param id="1" name="Value">DC_ImAPole.IAM</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="943745734199628" type="System">
+                                            <param id="0" name="Variable">TutorialCounter</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="178755369418779" type="DC_TutorialText">
+                                            <param id="0" name="Text">&quot;Try to park vehicles as quickly as possible.&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="500413088999629" type="DC_TapToContinue">
+                                            <param id="0" name="Text">&quot;Tap anywhere to begin!&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

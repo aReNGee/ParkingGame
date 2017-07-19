@@ -363,7 +363,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="497522342621972" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Secondary Downloads\please work.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\parking.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -749,7 +749,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871169404961997" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.500873" hotspotY="0.501502" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -766,6 +766,14 @@
             </object-type>
             <object-type name="DC_TutorialText" sid="342649323329851">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="DC_BlackBox4" sid="534945411493881">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633742282622419" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-type name="Touch" sid="756214668351968">

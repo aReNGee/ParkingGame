@@ -12,8 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="1">DC_MainGame</layout>
         <layout order="2">DC_Tutorial_1</layout>
-        <layout order="3">DC_Tutorial_2</layout>
-        <event-sheet active="1" order="0">DC_EventSheet</event-sheet>
+        <layout active="1" order="3">DC_Tutorial_2</layout>
+        <event-sheet order="0">DC_EventSheet</event-sheet>
         <event-sheet order="4">DC_Tutorial</event-sheet>
     </open-tabs>
     <properties>
@@ -25,10 +25,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/Bike/" />
+        <folder expanded="1" path="object-folder/Bike/" />
         <folder expanded="0" path="object-folder/Car/" />
         <folder expanded="1" path="object-folder/Uninteractable/" />
-        <folder expanded="0" path="object-folder/Clicky/" />
+        <folder expanded="1" path="object-folder/Clicky/" />
         <folder expanded="1" path="object-folder/Endgame/" />
         <folder expanded="1" path="object-folder/Tutorial Stuff/" />
         <folder expanded="1" path="layout-folder/" />
@@ -69,6 +69,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DC_HoleBox/" />
         <folder expanded="1" path="animation-folder/DC_BlackBox2/" />
         <folder expanded="1" path="animation-folder/DC_BlackBox3/" />
+        <folder expanded="1" path="animation-folder/DC_BlackBox4/" />
         <folder expanded="1" path="animation-folder/REPLACE_WITH_REAL_TIMER/" />
     </folders-expanded>
 </c2uistate>
