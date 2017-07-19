@@ -779,7 +779,7 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="0" name="Set text" sid="178755369418779" type="DC_TutorialText">
-                                            <param id="0" name="Text">&quot;Park vehicles quickly to reduce emissions. Vehilces will wait to avoid hitting pedestrians. Good luck!&quot;</param>
+                                            <param id="0" name="Text">&quot;Park vehicles quickly to reduce emissions. Vehicles will wait to avoid hitting pedestrians. Good luck!&quot;</param>
                                         </action>
                                         <action id="0" name="Set text" sid="500413088999629" type="DC_TapToContinue">
                                             <param id="0" name="Text">&quot;Tap anywhere to begin the game!&quot;</param>

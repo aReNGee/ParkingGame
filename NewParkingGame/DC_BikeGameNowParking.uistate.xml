@@ -10,10 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">DC_MainGame</layout>
-        <layout order="2">DC_Tutorial_2</layout>
-        <event-sheet order="0">DC_EventSheet</event-sheet>
-        <event-sheet active="1" order="3">DC_Tutorial</event-sheet>
+        <layout order="2">DC_MainGame</layout>
+        <layout order="3">DC_Tutorial_2</layout>
+        <event-sheet order="1">DC_EventSheet</event-sheet>
+        <event-sheet active="1" order="4">DC_Tutorial</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
