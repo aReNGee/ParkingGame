@@ -1946,17 +1946,53 @@
         </event-block>
         <event-group description="" sid="184187899965456" title="DC_Endgamestuff">
             <sub-events>
+                <variable constant="0" name="TempDiff" sid="756444498671257" static="0" type="number">0</variable>
                 <event-block sid="734224650189226">
                     <conditions>
                         <condition id="17" name="On tap object" sid="487874178832266" type="Touch">
                             <param id="0" name="Object">DC_Take2</param>
                         </condition>
+                        <condition id="-5" name="Compare width" sid="203718541927616" type="REPLACE_WITH_REAL_TIMER">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="770569345432754" type="System">
-                            <param id="0" name="Layout">DC_MainGame</param>
+                        <action id="-9" name="Set value" sid="899652999865470" type="System">
+                            <param id="0" name="Variable">TempDiff</param>
+                            <param id="1" name="Value">DC_OfficialDifficulty</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="866537570489578" type="System" />
+                        <action id="-9" name="Set value" sid="194866670664048" type="System">
+                            <param id="0" name="Variable">DC_OfficialDifficulty</param>
+                            <param id="1" name="Value">TempDiff</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="140872973352842" type="System">
+                            <param id="0" name="Layer">6</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="173890304233495">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="934815234125998" type="System">
+                                    <param id="0" name="Count">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="460627022821604" type="System">
+                                    <param id="0" name="Layer">loopindex</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="576682303730434">
+                            <conditions />
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="408730937183841" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="718229894951592">
                     <conditions>
