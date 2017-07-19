@@ -117,6 +117,10 @@
                                     <param id="0" name="Instance variable">TARGET</param>
                                     <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="709394003357731" type="DC_Car">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Value">&quot;nope&quot;</param>
+                                </action>
                                 <action id="0" name="Set text" sid="345578521474380" type="DC_PassengerTarget">
                                     <param id="0" name="Text">DC_Car.TARGET</param>
                                 </action>
@@ -135,12 +139,6 @@
                                 <action id="-11" name="Subtract from" sid="307278419080532" type="System">
                                     <param id="0" name="Variable">DC_CarsLeftToSpawn</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="283545609901491" type="System">
-                                    <param id="0" name="Object to create">LocationIconsThinky</param>
-                                    <param id="1" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
-                                    <param id="2" name="X">0</param>
-                                    <param id="3" name="Y">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1840,6 +1838,10 @@
                                     <param id="0" name="Instance variable">TARGET</param>
                                     <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="689245905943185" type="DC_Car">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Value">&quot;nope&quot;</param>
+                                </action>
                                 <action id="0" name="Set text" sid="639453303789892" type="DC_PassengerTarget">
                                     <param id="0" name="Text">DC_Car.TARGET</param>
                                 </action>
@@ -1852,12 +1854,6 @@
                                 <action id="-10" name="Add to" sid="278260254642498" type="System">
                                     <param id="0" name="Variable">DC_ThingsOnScreen</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="111703788682776" type="System">
-                                    <param id="0" name="Object to create">LocationIconsThinky</param>
-                                    <param id="1" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
-                                    <param id="2" name="X">0</param>
-                                    <param id="3" name="Y">0</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -1500,7 +1500,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <UClickedOnThis>nope</UClickedOnThis>
+                        <UClickedOnThis>can&apos;t</UClickedOnThis>
                         <ISpawnedAt></ISpawnedAt>
                         <ImGoingTo></ImGoingTo>
                         <InSpace>-1</InSpace>
