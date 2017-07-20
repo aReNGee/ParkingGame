@@ -12,8 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="1">DC_MainGame</layout>
         <layout order="2">DC_Tutorial_2</layout>
-        <event-sheet active="1" order="0">DC_EventSheet</event-sheet>
-        <event-sheet order="3">DC_Tutorial</event-sheet>
+        <event-sheet order="0">DC_EventSheet</event-sheet>
+        <event-sheet active="1" order="3">DC_Tutorial</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -67,11 +67,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/DC_PaintItBlack/" />
         <folder expanded="1" path="animation-folder/DC_Exit/" />
         <folder expanded="1" path="animation-folder/DC_Take2/" />
+        <folder expanded="1" path="animation-folder/DC_ScoreBackground/" />
+        <folder expanded="1" path="animation-folder/DC_ScoreBar/" />
         <folder expanded="1" path="animation-folder/DC_BlackBox/" />
         <folder expanded="1" path="animation-folder/DC_HoleBox/" />
         <folder expanded="1" path="animation-folder/DC_BlackBox2/" />
         <folder expanded="1" path="animation-folder/DC_BlackBox3/" />
         <folder expanded="1" path="animation-folder/DC_BlackBox4/" />
+        <folder expanded="1" path="animation-folder/DC_BlackBox5/" />
         <folder expanded="1" path="animation-folder/REPLACE_WITH_REAL_TIMER/" />
     </folders-expanded>
 </c2uistate>

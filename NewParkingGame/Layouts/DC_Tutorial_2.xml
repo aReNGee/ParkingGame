@@ -1874,6 +1874,125 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="DC_ScoreBar" uid="314">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1836</x>
+                        <y>838</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>400</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DC_ScoreBackground" uid="315">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1836</x>
+                        <y>638</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>400</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DC_ST4R" uid="316">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Empty</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <UrLosing>1</UrLosing>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1881</x>
+                        <y>677</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DC_ST4R" uid="317">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Empty</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <UrLosing>2</UrLosing>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1881</x>
+                        <y>583</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DC_ST4R" uid="318">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Empty</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <UrLosing>3</UrLosing>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1881</x>
+                        <y>481</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2203,8 +2322,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1600</x>
-                        <y>50</y>
+                        <x>1605</x>
+                        <y>-115</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -2228,8 +2347,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1700</x>
-                        <y>50</y>
+                        <x>1705</x>
+                        <y>-115</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -2253,8 +2372,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1800</x>
-                        <y>50</y>
+                        <x>1805</x>
+                        <y>-115</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -2280,8 +2399,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>123</x>
-                        <y>6</y>
+                        <x>109</x>
+                        <y>-141</y>
                         <z>0</z>
                         <width>1030</width>
                         <height>108</height>
@@ -2754,7 +2873,7 @@
                         <hotspotX>0.500872612</hotspotX>
                         <hotspotY>0.501501501</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
                 <instance type="DC_BlackBox4" uid="286">
@@ -2779,7 +2898,7 @@
                         <opacity>0.75</opacity>
                     </world>
                 </instance>
-                <instance type="DC_BlackBox" uid="281">
+                <instance type="DC_BlackBox5" uid="319">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2789,77 +2908,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-190</x>
-                        <y>572</y>
+                        <x>955</x>
+                        <y>601</y>
                         <z>0</z>
-                        <width>800</width>
-                        <height>1270</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.75</opacity>
-                    </world>
-                </instance>
-                <instance type="DC_BlackBox" uid="282">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>788</x>
-                        <y>-241</y>
-                        <z>0</z>
-                        <width>1869</width>
-                        <height>814</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.75</opacity>
-                    </world>
-                </instance>
-                <instance type="DC_BlackBox" uid="284">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>835</x>
-                        <y>1360</y>
-                        <z>0</z>
-                        <width>1678</width>
-                        <height>553</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.75</opacity>
-                    </world>
-                </instance>
-                <instance type="DC_BlackBox" uid="287">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>2050.5</x>
-                        <y>705.5</y>
-                        <z>0</z>
-                        <width>807</width>
-                        <height>1429</height>
+                        <width>1962</width>
+                        <height>1276</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

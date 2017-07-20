@@ -64,6 +64,7 @@
                     <type>DC_BikeCollider</type>
                     <type>DC_ThinkyBubbleBike</type>
                     <type>DC_BikeTarget</type>
+                    <type>DC_LocationIconsBike</type>
                 </container>
                 <animation-folder>
                     <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486380985878943" speed="10">
@@ -192,6 +193,7 @@
                     <type>DC_BikeCollider</type>
                     <type>DC_ThinkyBubbleBike</type>
                     <type>DC_BikeTarget</type>
+                    <type>DC_LocationIconsBike</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="606354455233250" speed="5">
@@ -213,6 +215,7 @@
                     <type>DC_BikeCollider</type>
                     <type>DC_ThinkyBubbleBike</type>
                     <type>DC_BikeTarget</type>
+                    <type>DC_LocationIconsBike</type>
                 </container>
             </object-type>
             <object-type name="DC_BikeTrigger" sid="460444905001623">
@@ -482,6 +485,7 @@
                     <type>DC_BikeCollider</type>
                     <type>DC_ThinkyBubbleBike</type>
                     <type>DC_BikeTarget</type>
+                    <type>DC_LocationIconsBike</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161619086468137" speed="5">
@@ -693,6 +697,13 @@
             </object-type>
             <object-type name="DC_LocationIconsBike" sid="280392469961671">
                 <plugin id="Sprite" />
+                <container>
+                    <type>DC_Bike</type>
+                    <type>DC_BikeCollider</type>
+                    <type>DC_ThinkyBubbleBike</type>
+                    <type>DC_BikeTarget</type>
+                    <type>DC_LocationIconsBike</type>
+                </container>
                 <animation-folder>
                     <animation framecount="9" loop="0" name="Animation1" pingpong="0" repeatcount="1" repeatto="0" sid="573082739730284" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitHub Repos\ParkingGame\ParkingGame\NewParkingGame\Files\icon1.png">
@@ -1149,6 +1160,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="DC_ScoreBackground" sid="656603956224315">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869889879752976" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DC_ScoreBar" sid="850218184375676">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="705473318029696" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Tutorial Stuff">
             <object-type name="DC_BlackBox" sid="991842008990588">
@@ -1193,6 +1220,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633742282622419" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DC_BlackBox5" sid="513884084991342">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662340885595039" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
