@@ -23,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="TheTasteYouCanSee" />
+    <active-layer name="LowerLayer" />
     <layers>
         <layer locked="0" name="SolidObjects" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="LowerLayer" parallax-in-editor="0" visible="1" />

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DC_EventSheet</name>
     <events>
+        <variable comment="new scoring system" constant="0" name="DC_StuffParked" sid="207199229672195" static="0" type="number">0</variable>
         <variable comment="1 is easy, 2 is med, 4 is hard" constant="0" name="DC_OfficialDifficulty" sid="599313801733944" static="0" type="number">1</variable>
         <variable comment="Default Value 6" constant="0" name="DC_CarsLeftToSpawn" sid="845113707372006" static="0" type="number">6</variable>
         <variable comment="Default Value 3" constant="0" name="DC_BikesLeftToSpawn" sid="430506560562796" static="0" type="number">3</variable>
@@ -30,21 +31,25 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="414984308519825" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="414984308519825" type="System">
                             <param id="0" name="Variable">DC_IsItACar</param>
-                            <param id="1" name="Value">choose(&quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;no&quot;, &quot;no&quot;, &quot;no&quot;)</param>
+                            <param id="1" name="Value">choose(&quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;,&quot;no&quot;, &quot;no&quot;, &quot;no&quot;)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="275779445932709" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="275779445932709" type="System">
                             <param id="0" name="Variable">DC_SpawnItHere</param>
                             <param id="1" name="Value">choose(0,1,2,3)</param>
                         </action>
-                        <action id="-9" name="Set value" sid="620485619983717" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="620485619983717" type="System">
                             <param id="0" name="Variable">DC_TimeInterval</param>
                             <param id="1" name="Value">time</param>
                         </action>
+                        <action id="0" name="Call function" sid="213639319974919" type="Function">
+                            <param id="0" name="Name">&quot;sp0wn&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="393265173332954">
+                        <event-block disabled="1" sid="393265173332954">
                             <conditions />
                             <actions>
                                 <action id="-10" name="Add to" sid="992606177130906" type="System">
@@ -53,7 +58,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="946761267237091">
+                                <event-block disabled="1" sid="946761267237091">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="200709067326501" type="System">
                                             <param id="0" name="Variable">DC_IsItACar</param>
@@ -73,7 +78,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="683057200204932">
+                                <event-block disabled="1" sid="683057200204932">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="533860876908001" type="System" />
                                         <condition id="-14" name="Compare variable" sid="935797419982792" type="System">
@@ -91,7 +96,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="670823222907308">
+                        <event-block disabled="1" sid="670823222907308">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="802954294233440" type="System">
                                     <param id="0" name="Variable">DC_IsItACar</param>
@@ -142,7 +147,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="173824933109762">
+                        <event-block disabled="1" sid="173824933109762">
                             <conditions>
                                 <condition id="-22" name="Else" sid="277444460160660" type="System" />
                             </conditions>
@@ -348,6 +353,9 @@
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="-26" name="Move to layer" sid="807120987727698" type="DC_ParkingSpace">
+                                                            <param id="0" name="Layer">&quot;MovingObject&quot;</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -721,6 +729,24 @@
                             <param id="1" name="Distance">300 * dt</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <comment>faster once thingy is assigned</comment>
+                        <event-block sid="251287309063420">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="211444266667859" type="DC_Car">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;cant&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="270742406720422" type="DC_Car">
+                                    <param id="0" name="Angle">DC_Car.Angle</param>
+                                    <param id="1" name="Distance">180 * dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="523098557590890">
                     <conditions>
@@ -758,11 +784,28 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-23" name="Move at angle" sid="699430084272711" type="DC_Bike">
+                        <action id="-23" name="Move at angle" sid="306036471302136" type="DC_Bike">
                             <param id="0" name="Angle">DC_Bike.Angle</param>
                             <param id="1" name="Distance">300 * dt</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="888559976775657">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="605987341578080" type="DC_Bike">
+                                    <param id="0" name="Instance variable">UClickedOnThis</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;cant&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="313729251793456" type="DC_Bike">
+                                    <param id="0" name="Angle">DC_Bike.Angle</param>
+                                    <param id="1" name="Distance">180 * dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="573223492435276">
                     <conditions>
@@ -1598,7 +1641,7 @@
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="367851227486036" type="DC_TempScoreThingy">
-                            <param id="0" name="Text">&quot;Timer: &quot; &amp; DC_TempTimer &amp; &quot; Emissions: &quot; &amp; DC_Emissions</param>
+                            <param id="0" name="Text">&quot;Timer: &quot; &amp; DC_TempTimer &amp; &quot; Emissions: &quot; &amp; DC_Emissions &amp; &quot; stuff parked: &quot; &amp; DC_StuffParked</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1641,8 +1684,8 @@
                         <event-block sid="622225963289284">
                             <conditions />
                             <actions>
-                                <action id="0" name="Set text" sid="875301057759801" type="DC_TempScoreThingy">
-                                    <param id="0" name="Text">&quot;Timer: &quot; &amp; DC_TempTimer &amp; &quot;        Emissions: &quot; &amp; DC_Emissions</param>
+                                <action id="0" name="Set text" sid="637242905896598" type="DC_TempScoreThingy">
+                                    <param id="0" name="Text">&quot;Timer: &quot; &amp; DC_TempTimer &amp; &quot; Emissions: &quot; &amp; DC_Emissions &amp; &quot; stuff parked: &quot; &amp; DC_StuffParked</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1734,6 +1777,10 @@
                                     <param id="0" name="Name">&quot;DC_SucksToBeCars&quot;</param>
                                     <param id="1" name="Parameter {n}">DC_ParkingSpace.IAM</param>
                                 </action>
+                                <action id="-10" name="Add to" sid="609066712167535" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1811,6 +1858,10 @@
                                 <action id="-10" name="Set value" sid="955239444500543" type="DC_Bike">
                                     <param id="0" name="Instance variable">ImGoingTo</param>
                                     <param id="1" name="Value">DC_ImAPole.IAM</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="432064406377000" type="System">
+                                    <param id="0" name="Variable">DC_StuffParked</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2072,6 +2123,244 @@
                         </condition>
                     </conditions>
                     <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="678351904566283" title="Spawn More Things">
+            <sub-events>
+                <event-block sid="342074516005573">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="932108171110021" type="System">
+                            <param id="0" name="Variable">DC_ThingsOnScreen</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="389123350114011" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="674239729266790">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="943940446472322" type="System">
+                                    <param id="0" name="Count">3-DC_ThingsOnScreen</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="226552149400836" type="Function">
+                                    <param id="0" name="Name">&quot;sp0wn&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="399832175494283" title="Spawning Moved Here">
+            <sub-events>
+                <event-block sid="494293908201146">
+                    <conditions>
+                        <condition id="0" name="On function" sid="467007629151298" type="Function">
+                            <param id="0" name="Name">&quot;sp0wn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="798342352150939">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="316406084074385" type="System">
+                                    <param id="0" name="Variable">DC_IsItACar</param>
+                                    <param id="1" name="Value">choose(&quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;, &quot;yes&quot;,&quot;no&quot;, &quot;no&quot;, &quot;no&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="710902522069060" type="System">
+                                    <param id="0" name="Variable">DC_TimeInterval</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="881641729176739" type="System">
+                                    <param id="0" name="Variable">DC_ThingsOnScreen</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="798172927928086" type="System">
+                                    <param id="0" name="Variable">DC_SpawnItHere</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="382031674647336">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="738607394893661" type="System">
+                                            <param id="0" name="Variable">DC_SpawnItHere</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="776017702741603" type="System">
+                                            <param id="0" name="Variable">DC_SpawnItHere</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="481408514198655">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="916830613158665" type="System">
+                                            <param id="0" name="Variable">DC_IsItACar</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;yes&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="135768881624424" type="System">
+                                            <param id="0" name="Variable">DC_CarsLeftToSpawn</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="559583449124771" type="System">
+                                            <param id="0" name="Variable">DC_IsItACar</param>
+                                            <param id="1" name="Value">&quot;no&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="526669537102173">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="168931976747853" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="620312929542884" type="System">
+                                            <param id="0" name="Variable">DC_BikesLeftToSpawn</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="917165789615787" type="System">
+                                            <param id="0" name="Variable">DC_IsItACar</param>
+                                            <param id="1" name="Value">&quot;yes&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="584321870588599">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="762244130413463" type="System">
+                                            <param id="0" name="Variable">DC_IsItACar</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;yes&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="886157236263728" type="System">
+                                            <param id="0" name="Object to create">DC_Car</param>
+                                            <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                                            <param id="2" name="X">DC_StuffSpawnsHere(DC_SpawnItHere).X</param>
+                                            <param id="3" name="Y">DC_StuffSpawnsHere(DC_SpawnItHere).Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="975903311699334" type="DC_Car">
+                                            <param id="0" name="Instance variable">ISpawnedAt</param>
+                                            <param id="1" name="Value">DC_SpawnItHere</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="638241541294779" type="DC_Car">
+                                            <param id="0" name="Angle">DC_StuffSpawnsHere(DC_SpawnItHere).SetRotationTo</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="677864952046684" type="DC_Car">
+                                            <param id="0" name="Instance variable">TARGET</param>
+                                            <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="135469184285804" type="DC_Car">
+                                            <param id="0" name="Instance variable">UClickedOnThis</param>
+                                            <param id="1" name="Value">&quot;nope&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="842583862938111" type="DC_PassengerTarget">
+                                            <param id="0" name="Text">DC_Car.TARGET</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="733862252526545" type="DC_PassengerTarget">
+                                            <param id="0" name="Layer">&quot;Text&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Play" sid="990022598329962" type="Audio">
+                                            <param id="0" name="Audio file">sfx_carhorn</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="553981711564121" type="DC_ThinkyBubble">
+                                            <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="256191626366257" type="System">
+                                            <param id="0" name="Variable">DC_CarsLeftToSpawn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="924602544219817">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="170693137031514" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="284893014686773" type="System">
+                                            <param id="0" name="Object to create">DC_Bike</param>
+                                            <param id="1" name="Layer">&quot;MovingObject&quot;</param>
+                                            <param id="2" name="X">DC_StuffSpawnsHere(DC_SpawnItHere).X</param>
+                                            <param id="3" name="Y">DC_StuffSpawnsHere(DC_SpawnItHere).Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="659602376302536" type="DC_Bike">
+                                            <param id="0" name="Instance variable">ISpawnedAt</param>
+                                            <param id="1" name="Value">DC_SpawnItHere</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="594975730963572" type="DC_Bike">
+                                            <param id="0" name="Angle">DC_StuffSpawnsHere(DC_SpawnItHere).SetRotationTo</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="954542307631418" type="DC_Bike">
+                                            <param id="0" name="Instance variable">TARGET</param>
+                                            <param id="1" name="Value">choose(1,2,3,4,5,6,7,8,9)</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="229994709959848" type="DC_BikeTarget">
+                                            <param id="0" name="Text">DC_Bike.TARGET</param>
+                                        </action>
+                                        <action disabled="1" id="-26" name="Move to layer" sid="146692935492930" type="DC_BikeTarget">
+                                            <param id="0" name="Layer">&quot;Text&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Play" sid="404280994571468" type="Audio">
+                                            <param id="0" name="Audio file">sfx_bikebell</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="610416285953665" type="DC_ThinkyBubbleBike">
+                                            <param id="0" name="Layer">&quot;Cloud(f)layer&quot;</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="944840664716628" type="System">
+                                            <param id="0" name="Variable">DC_BikesLeftToSpawn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="211699365878968" type="System">
+                                            <param id="0" name="Object to create">DC_LocationIconsBike</param>
+                                            <param id="1" name="Layer">&quot;TheTasteYouCanSee&quot;</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="148338557739936" title="Hacky way to put parking spaces back">
+            <sub-events>
+                <event-block sid="117512758215747">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="289459196956299" type="DC_ParkingSpace">
+                            <param id="0" name="Instance variable">Occupied</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;nah&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="136063540570944" type="DC_ParkingSpace">
+                            <param id="0" name="Layer">&quot;SolidObjects&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
